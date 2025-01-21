@@ -1,3 +1,6 @@
+export interface VideoData {
+  videoUrl: string;
+}
 
 export interface ImageData {
   imageUrl: string;
