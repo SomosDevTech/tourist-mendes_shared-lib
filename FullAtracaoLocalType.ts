@@ -1,4 +1,4 @@
-import { VideoData } from "./typesHomePage";
+import { ImageData, VideoData } from "./typesHomePage";
 
 export default interface FullAtracaoLocalType {
   title: string;
