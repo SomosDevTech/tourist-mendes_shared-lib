@@ -8,14 +8,14 @@ interface Appointments {
 export default interface FullEventoType {
   title: string;
   category: string;
-  longDescription: string;
-  historicalInfo: string;
+  longDescription: string[];
+  historicalInfo: string[];
   schedule: Appointments[];
   contacts: {
-    phoneNumbers: string[];
-    email: string[];
-    site: string[];
-    address: string[];
+    phoneNumbers?: string[];
+    email?: string[];
+    site?: string[];
+    address: string;
   };
   socialMedia: {
     instagram?: string;
@@ -26,7 +26,6 @@ export default interface FullEventoType {
   };
   coverImage: ImageData;
   photoGallery: ImageData[];
-  videos: VideoData[];
+  videos?: VideoData[];
   mapUrlLink: string;
 }
-
