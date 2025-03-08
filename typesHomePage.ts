@@ -1,3 +1,6 @@
+export interface VideoData {
+  videoUrl: string;
+}
 
 export interface ImageData {
   imageUrl: string;
@@ -40,7 +43,7 @@ export interface EventHomeCard {
 }
 
 export interface AboutSessionData {
-  aboutDescription: string;
+  aboutDescription: string[];
   emails: string[];
   phoneNumbers: string[];
   address: string;
