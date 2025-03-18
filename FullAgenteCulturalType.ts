@@ -16,7 +16,7 @@ export default interface FullAgenteCulturalType {
   };
   socialMedia: {
     instagram?: string;
-    facebooK?: string;
+    facebook?: string;
     tiktok?: string;
     whatsapp?: string;
     twitter?: string;

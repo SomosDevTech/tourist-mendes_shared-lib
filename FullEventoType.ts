@@ -15,7 +15,7 @@ export default interface FullEventoType {
   contacts: {
     phoneNumbers?: string[];
     email?: string[];
-    site?: string[];
+    site?: string;
     address: string;
   };
   socialMedia: {
