@@ -5,6 +5,7 @@ import { ImageData } from "./typesHomePage";
 /*Cards Types*/
 export interface FiltrosAtracaoLocalCard {
   title: string;
+  category: string;
   neighborhood: string;
   linkUrl: string;
   imageData: ImageData;
@@ -31,6 +32,7 @@ export interface FiltrosTrilhaCard {
 
 export interface FiltrosEventoCard {
   title: string;
+  category: string;
   neighborhood: string;
   linkUrl: string;
   schedule: EventDate[];
