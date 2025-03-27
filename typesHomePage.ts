@@ -54,4 +54,5 @@ export interface ResponseDTO<T> {
   status: number;
   dataType: string; // For debug porpuses
   data: T;
+  totalRecords?: number;
 }
