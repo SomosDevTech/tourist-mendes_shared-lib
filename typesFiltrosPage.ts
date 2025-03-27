@@ -48,6 +48,7 @@ export interface AtracaoLocalCategory {
 export interface FiltrosAtracaoLocalType {
   categories: AtracaoLocalCategory[];
   neighborhoods: Neighborhood[];
+  totalRecords: number;
 }
 
 export interface AgenteCulturalCategory {
@@ -63,6 +64,7 @@ export interface areaOfExpert {
 export interface FiltrosagenteCulturalType {
   categories: AgenteCulturalCategory[];
   areasOfExpert: areaOfExpert[];
+  totalRecords: number;
 }
 
 export interface TrilhaCategory {
@@ -74,6 +76,7 @@ export interface FiltrosTrilhaType {
   categories: TrilhaCategory[];
   neighborhoods: Neighborhood[];
   difficulty: "Fácil" | "Moderada" | "Difícil" | "Muito Difícil" | "Experts";
+  totalRecords: number;
 }
 
 export interface EventoCategory {
@@ -84,6 +87,7 @@ export interface EventoCategory {
 export interface FiltrosEventoType {
   categories: EventoCategory[];
   neighborhoods: Neighborhood[];
+  totalRecords: number;
 }
 
 
