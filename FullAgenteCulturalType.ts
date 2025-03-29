@@ -1,27 +1,27 @@
 import { ImageData, VideoData } from "./typesHomePage";
 
-export default interface FullAtracaoLocalType {
-  title: string;
+export default interface FullAgenteCulturalType {
+  name: string;
   category: string;
-  longDescription: string[];
-  historicalInfo: string[];
-  workingTime: string;
+  aboutMe: string[];
+  myContributions: string[];
+  profileImg: ImageData;
+  coverImg: ImageData;
+  mapUrlLink?: string;
   contacts: {
     phoneNumbers?: string[];
     email?: string[];
-    site?: string;
-    address: string;
-  }
+    site?: string[];
+    address?: string;
+  };
   socialMedia: {
     instagram?: string;
     facebooK?: string;
     tiktok?: string;
     whatsapp?: string;
     twitter?: string;
-  }
-  coverImage: ImageData;
-  photoGallery: ImageData[];
+  };
+  tags: string[];
+  photoGallery?: ImageData[];
   videos?: VideoData[];
-  tour360UrlLink?: string;
-  mapUrlLink: string;
 }
