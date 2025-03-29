@@ -14,7 +14,7 @@ export default interface FullAtracaoLocalType {
   }
   socialMedia: {
     instagram?: string;
-    facebooK?: string;
+    facebook?: string;
     tiktok?: string;
     whatsapp?: string;
     twitter?: string;
