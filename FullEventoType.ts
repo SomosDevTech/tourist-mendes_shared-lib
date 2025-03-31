@@ -11,19 +11,11 @@ export default interface FullEventoType {
   category: string;
   longDescription: string[];
   historicalInfo: string[];
-<<<<<<< HEAD
-  schedule: Appointments[];
-  contacts: {
-    phoneNumbers?: string[];
-    email?: string[];
-    site?: string[];
-=======
   schedule: EventDate[];
   contacts: {
     phoneNumbers?: string[];
     email?: string[];
     site?: string;
->>>>>>> 211055a850c63756aa55936c4063e6c253f03490
     address: string;
   };
   socialMedia: {
