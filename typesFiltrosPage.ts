@@ -40,54 +40,54 @@ export interface FiltrosEventoCard {
 }
 
 /*Filters Types*/
-export interface AtracaoLocalCategory {
+export interface AtracaoLocalCategoryType {
   id: string;
   name: string;
 }
 
 export interface FiltrosAtracaoLocalType {
-  categories: AtracaoLocalCategory[];
-  neighborhoods: Neighborhood[];
+  categories: AtracaoLocalCategoryType[];
+  neighborhoods: BairroType[];
 }
 
-export interface AgenteCulturalCategory {
+export interface AgenteCulturalCategoryType {
   id: string;
   name: string;
 }
 
-export interface areaOfExpert {
+export interface AreaDeAtuacaoType {
   id: string;
   name: string;
 }
 
 export interface FiltrosagenteCulturalType {
-  categories: AgenteCulturalCategory[];
-  areasOfExpert: areaOfExpert[];
+  categories: AgenteCulturalCategoryType[];
+  areasOfExpert: AreaDeAtuacaoType[];
 }
 
-export interface TrilhaCategory {
+export interface TrilhaCategoryType {
   id: string;
   name: string;
 }
 
 export interface FiltrosTrilhaType {
-  categories: TrilhaCategory[];
-  neighborhoods: Neighborhood[];
+  categories: TrilhaCategoryType[];
+  neighborhoods: BairroType[];
   difficulty: "Fácil" | "Moderada" | "Difícil" | "Muito Difícil" | "Experts";
 }
 
-export interface EventoCategory {
+export interface EventoCategoryType {
   id: string;
   name: string;
 }
 
 export interface FiltrosEventoType {
-  categories: EventoCategory[];
-  neighborhoods: Neighborhood[];
+  categories: EventoCategoryType[];
+  neighborhoods: BairroType[];
 }
 
 
-export interface Neighborhood {
+export interface BairroType {
   id: string;
   name: string;
 }
