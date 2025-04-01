@@ -91,3 +91,7 @@ export interface BairroType {
   id: string;
   name: string;
 }
+
+export type DataType = {
+  date: Date
+}
