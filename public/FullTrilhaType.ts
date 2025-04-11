@@ -1,4 +1,4 @@
-import { ImageData, VideoData } from "./typesHomePage";
+import { ImageData, VideoData } from "./generalTypes";
 
 interface TrilhaInfo {
   extension: number;

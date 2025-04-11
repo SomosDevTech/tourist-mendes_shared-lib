@@ -1,11 +1,4 @@
-export interface VideoData {
-  videoUrl: string;
-}
-
-export interface ImageData {
-  imageUrl: string;
-  altDescription: string;
-}
+import { ImageData } from "./generalTypes";
 
 export interface HomeBanner {
   imageData: ImageData;
@@ -49,10 +42,3 @@ export interface AboutSessionData {
   address: string;
 }
 
-export interface ResponseDTO<T> {
-  message: string;
-  status: number;
-  dataType: string; // For debug porpuses
-  data: T;
-  totalRecords?: number;
-}

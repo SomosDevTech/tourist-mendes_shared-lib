@@ -1,4 +1,4 @@
-import { ImageData, VideoData } from "./typesHomePage";
+import { ImageData, VideoData } from "./generalTypes";
 
 export default interface FullAgenteCulturalType {
   name: string;

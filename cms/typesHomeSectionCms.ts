@@ -1,10 +1,10 @@
-import { ImageData } from './typesHomePage';
 import { BairroData } from "@/types/BairroData";
 import { CategoryData } from "@/types/CategoryData";
-import { AutorType, LastUpdateType } from "./typesCms";
+import { AutorType, LastUpdateType } from './generalCmsTypes';
+import { ImageData } from "../public/generalTypes";
 
 
-export interface atracaoLocalHighlightCmsHomeType {
+export interface AtracaoLocalHighlightCmsHomeType {
   id: string;
   status: boolean;
   title: string;
@@ -29,7 +29,7 @@ export interface BannerCmsHomeType {
   imageData: ImageData;
 }
 
-export interface RegisterBannerHomeType {
+export interface RegisterBannerCmsHomeType {
   name: string;
   description?: string;
   redirectLink: string;

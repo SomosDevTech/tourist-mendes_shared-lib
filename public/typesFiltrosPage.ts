@@ -1,5 +1,5 @@
 import { EventDate } from "./FullEventoType";
-import { ImageData } from "./typesHomePage";
+import { ImageData } from "./generalTypes";
 
 
 /*Cards Types*/

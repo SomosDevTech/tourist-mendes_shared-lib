@@ -1,32 +1,27 @@
-import { ImageData, VideoData } from "./typesHomePage";
+import { ImageData, VideoData } from "./generalTypes";
 
-export interface EventDate {
-  date: string;
-  startTime: string;
-  finalTime: string;
-};
-
-export default interface FullEventoType {
+export default interface FullAtracaoLocalType {
   title: string;
   category: string;
   longDescription: string[];
   historicalInfo: string[];
-  schedule: EventDate[];
+  workingTime: string;
   contacts: {
     phoneNumbers?: string[];
     email?: string[];
     site?: string;
     address: string;
-  };
+  }
   socialMedia: {
     instagram?: string;
-    facebooK?: string;
+    facebook?: string;
     tiktok?: string;
     whatsapp?: string;
     twitter?: string;
-  };
+  }
   coverImage: ImageData;
   photoGallery: ImageData[];
   videos?: VideoData[];
+  tour360UrlLink?: string;
   mapUrlLink: string;
 }
