@@ -4,17 +4,17 @@ import { ImageData } from "./generalTypes";
 
 /*Cards Types*/
 export interface FiltrosAtracaoLocalCard {
+  id: string;
   title: string;
   category: string;
   neighborhood: string;
-  linkUrl: string;
   imageData: ImageData;
 }
 
 export interface FiltrosAgenteCulturalCard {
+  id: string;
   name: string;
   category: string;
-  linkUrl: string;
   imageData: ImageData;
 }
 
@@ -24,17 +24,17 @@ export interface TrailInfos {
 }
 
 export interface FiltrosTrilhaCard {
+  id: string;
   title: string;
   trailInfos: TrailInfos;
-  linkUrl: string;
   imageData: ImageData;
 }
 
 export interface FiltrosEventoCard {
+  id: string;
   title: string;
   category: string;
   neighborhood: string;
-  linkUrl: string;
   schedule: EventDate[];
   imageData: ImageData;
 }
