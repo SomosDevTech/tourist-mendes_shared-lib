@@ -18,7 +18,7 @@ export interface FiltrosAgenteCulturalCard {
   imageData: ImageData;
 }
 
-interface TrailInfos {
+export interface TrailInfos {
   extension: number;
   difficulty: "Fácil" | "Moderada" | "Difícil" | "Muito Difícil" | "Experts";
 }

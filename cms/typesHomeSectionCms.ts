@@ -1,15 +1,14 @@
-import { BairroData } from "@/types/BairroData";
-import { CategoryData } from "@/types/CategoryData";
 import { AutorType, LastUpdateType } from './generalCmsTypes';
 import { ImageData } from "../public/generalTypes";
+import { AtracaoLocalCategoryType, BairroType } from '../public/typesFiltrosPage';
 
 
 export interface AtracaoLocalHighlightCmsHomeType {
   id: string;
   status: boolean;
   title: string;
-  category: CategoryData;
-  neighborhood: BairroData;
+  category: AtracaoLocalCategoryType;
+  neighborhood: BairroType;
   author: AutorType;
   createdAt: Date;
   lastUpdate: LastUpdateType;
