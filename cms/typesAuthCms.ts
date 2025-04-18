@@ -1,3 +1,5 @@
+import { Role } from "@/config/prisma/generatedFiles";
+
 export interface UsuarioLoginType {
   email: string;
   password: string;
@@ -6,6 +8,8 @@ export interface UsuarioLoginType {
 export interface PayloadUsuarioTokenType {
   id: string;
   username: string;
+  role: Role;
+  email: string;
   token: string;
 }
 
