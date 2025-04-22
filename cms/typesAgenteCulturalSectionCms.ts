@@ -4,7 +4,7 @@ import { AutorType, LastUpdateType } from "./generalCmsTypes";
 export interface AgenteCulturalCmsType {
   id: string;
   status: boolean;
-  title: string;
+  name: string;
   category: AgenteCulturalCategoryType;
   neighborhood: BairroType;
   areaOfexpert: AreaDeAtuacaoType;

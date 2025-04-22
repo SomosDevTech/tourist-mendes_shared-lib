@@ -1,4 +1,4 @@
-import { AutorType, LastUpdateType } from './generalCmsTypes';
+import { AutorType } from './generalCmsTypes';
 import { ImageData } from "../public/generalTypes";
 import { AtracaoLocalCategoryType, BairroType } from '../public/typesFiltrosPage';
 
@@ -11,7 +11,6 @@ export interface AtracaoLocalHighlightCmsHomeType {
   neighborhood: BairroType;
   author: AutorType;
   createdAt: Date;
-  lastUpdate: LastUpdateType;
 }
 
 export interface AtracaoLocalCsmHomeType {
