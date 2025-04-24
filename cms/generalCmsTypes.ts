@@ -9,3 +9,4 @@ export interface LastUpdateType {
   name: string;
   updatedAt: Date;
 }
+

@@ -6,11 +6,9 @@ export interface AgenteCulturalCmsType {
   status: boolean;
   name: string;
   category: AgenteCulturalCategoryType;
-  neighborhood: BairroType;
-  areaOfexpert: AreaDeAtuacaoType;
   author: AutorType;
   createdAt: Date;
-  lastUpdate: LastUpdateType;
+  lastUpdate?: LastUpdateType;
 }
 
 export interface AgenteCulturalCmsFiltersType {
@@ -20,4 +18,11 @@ export interface AgenteCulturalCmsFiltersType {
   date?: DataType[];
 }
 
+export interface AgenteCulturalCategoryCmsList {
+  category: AgenteCulturalCategoryType[]
+}
 
+
+export interface BairroCmsList {
+  neighborhoods: BairroType[];
+}

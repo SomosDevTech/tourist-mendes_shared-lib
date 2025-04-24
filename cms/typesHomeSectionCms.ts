@@ -1,4 +1,4 @@
-import { AutorType } from './generalCmsTypes';
+                       import { AutorType } from './generalCmsTypes';
 import { ImageData } from "../public/generalTypes";
 import { AtracaoLocalCategoryType, BairroType } from '../public/typesFiltrosPage';
 
@@ -32,4 +32,17 @@ export interface RegisterBannerCmsHomeType {
   description?: string;
   redirectLink: string;
   image: File;
+}
+
+export interface AgenteCulturalHighlightCmsHomeType {
+  agenteCulturalId: string;
+}
+
+export interface AgenteCulturalCmsHomeType {
+  id: string;
+  name: string;
+}
+
+export interface AgenteCulturalListCmsHomeType {
+  agenteCulturalList: AgenteCulturalCmsHomeType[];
 }

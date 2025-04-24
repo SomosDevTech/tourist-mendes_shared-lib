@@ -19,3 +19,12 @@ export interface CadastroUsarioType {
   password: string;
   confirmPassword: string;
 }
+
+export interface ForgotPassword {
+  email: string;
+}
+export interface RecoverPassword {
+  currentPassword: string;
+  newPassword: string;
+  confirmPassword: string;
+}
