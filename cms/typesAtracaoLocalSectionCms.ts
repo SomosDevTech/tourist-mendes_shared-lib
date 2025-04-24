@@ -8,7 +8,7 @@ export interface AtracaoLocalCmsType {
   category: AtracaoLocalCategoryType;
   neighborhood: BairroType;
   author: AutorType;
-  createdAt: Date;
+  regsitrationDate: Date;
   lastUpdate: LastUpdateType;
 }
 

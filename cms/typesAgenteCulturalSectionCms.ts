@@ -7,8 +7,7 @@ export interface AgenteCulturalCmsType {
   name: string;
   category: AgenteCulturalCategoryType;
   author: AutorType;
-  createdAt: Date;
-  lastUpdate?: LastUpdateType;
+  registrationDate: Date;
 }
 
 export interface AgenteCulturalCmsFiltersType {
