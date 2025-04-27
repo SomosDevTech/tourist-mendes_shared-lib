@@ -1,6 +1,6 @@
 import { ImageData, VideoData } from "./generalTypes";
 
-interface TrilhaInfo {
+export interface TrilhaInfo {
   extension: number;
   avgDuration: string;
   difficulty: "Fácil" | "Moderada" | "Difícil" | "Muito Difícil" | "Experts";

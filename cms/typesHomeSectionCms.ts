@@ -1,23 +1,7 @@
-                       import { AutorType } from './generalCmsTypes';
+import { EventDate } from "../public/FullEventoType";
+import { TrilhaInfo } from "../public/FullTrilhaType";
 import { ImageData } from "../public/generalTypes";
-import { AtracaoLocalCategoryType, BairroType } from '../public/typesFiltrosPage';
-
-
-export interface AtracaoLocalHighlightCmsHomeType {
-  id: string;
-  status: boolean;
-  title: string;
-  category: AtracaoLocalCategoryType;
-  neighborhood: BairroType;
-  author: AutorType;
-  createdAt: Date;
-}
-
-export interface AtracaoLocalCsmHomeType {
-  id: string;
-  title: string;
-}
-
+import { AgenteCulturalCategoryType, AtracaoLocalCategoryType, BairroType, EventoCategoryType, TrilhaCategoryType } from '../public/typesFiltrosPage';
 
 export interface BannerCmsHomeType {
   id: string
@@ -34,15 +18,73 @@ export interface RegisterBannerCmsHomeType {
   image: File;
 }
 
+export interface AtracaoLocalHighlightCmsHomeType {
+  id: string;
+  status: boolean;
+  title: string;
+  neighborhood: BairroType;
+  category: AtracaoLocalCategoryType;
+  coverImage: ImageData
+}
+
+export interface UpdateAtracaoLocalHighlightCmsHomeType {
+  atracaoLocallId: string;
+}
+
 export interface AgenteCulturalHighlightCmsHomeType {
+  id: string;
+  status: boolean;
+  name: string;
+  category: AgenteCulturalCategoryType;
+  profileImage: ImageData
+}
+
+export interface UpdateAgenteCulturalHighlightCmsHomeType {
   agenteCulturalId: string;
 }
 
-export interface AgenteCulturalCmsHomeType {
+
+export interface TrilhaHighlightCmsHomeType {
   id: string;
+  status: boolean;
   name: string;
+  category: TrilhaCategoryType;
+  neighborhood: BairroType;
+  trailInfos: TrilhaInfo;
+  coverImage: ImageData
 }
 
-export interface AgenteCulturalListCmsHomeType {
-  agenteCulturalList: AgenteCulturalCmsHomeType[];
+export interface UpdateTrilhaHighlightCmsHomeType {
+  trilhalId: string;
+}
+
+export interface EventoHighlightCmsHomeType {
+  id: string;
+  status: boolean;
+  name: string;
+  category: EventoCategoryType;
+  neighborhood: BairroType;
+  dates: EventDate[];
+  coverImage: ImageData
+}
+
+export interface UpdateEventoHighlightCmsHomeType {
+  eventoId: string;
+}
+
+export interface SobreCmsHomeType {
+  description: string;
+  contacts: {
+    email1: string;
+    email2: string;
+    phone1: string;
+    phone2: string;
+    address: {
+      street: string;
+      number: string;
+      complement: string;
+      neighborhoodId: string;
+      zipCode: string;
+    }
+  };
 }

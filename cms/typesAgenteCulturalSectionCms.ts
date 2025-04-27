@@ -1,19 +1,21 @@
+import { ImageData } from "../public/generalTypes";
 import { AgenteCulturalCategoryType, AreaDeAtuacaoType, AtracaoLocalCategoryType, BairroType, DataType } from "../public/typesFiltrosPage";
-import { AutorType, LastUpdateType } from "./generalCmsTypes";
+import { CreatedBy, UpdatedBy } from "./generalCmsTypes";
 
 export interface AgenteCulturalCmsType {
   id: string;
   status: boolean;
   name: string;
   category: AgenteCulturalCategoryType;
-  author: AutorType;
+  author: CreatedBy;
   registrationDate: Date;
+  lastUpdate: UpdatedBy;
 }
 
 export interface AgenteCulturalCmsFiltersType {
   category: AtracaoLocalCategoryType[];
   areaOfexpert: AreaDeAtuacaoType[];
-  author: AutorType[];
+  author: CreatedBy[];
   date?: DataType[];
 }
 

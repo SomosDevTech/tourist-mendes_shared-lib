@@ -1,5 +1,5 @@
 import { AtracaoLocalCategoryType, BairroType, DataType } from "../public/typesFiltrosPage";
-import { AutorType, LastUpdateType } from "./generalCmsTypes";
+import { CreatedBy, UpdatedBy } from "./generalCmsTypes";
 
 export interface AtracaoLocalCmsType {
   id: string;
@@ -7,15 +7,15 @@ export interface AtracaoLocalCmsType {
   title: string;
   category: AtracaoLocalCategoryType;
   neighborhood: BairroType;
-  author: AutorType;
-  regsitrationDate: Date;
-  lastUpdate: LastUpdateType;
+  author: CreatedBy;
+  registrationDate: Date;
+  lastUpdate: UpdatedBy;
 }
 
 export interface AtracaoLocalCmsFiltersType {
   category: AtracaoLocalCategoryType[];
   neighborhood: BairroType[];
-  author: AutorType[];
+  author: CreatedBy[];
   date?: DataType[];
 }
 
