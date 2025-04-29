@@ -1,6 +1,6 @@
 import { TrilhaLevel } from "@/config/prisma/generatedFiles";
 
-export default interface FullAtracaoLocalCmsType {
+export default interface FullTrilhaCmsType {
   status: boolean;
   title: string;
   titleSort: string;
@@ -15,7 +15,7 @@ export default interface FullAtracaoLocalCmsType {
   linkUrl: string;
   extension: number;
   duration: number;
-  level: TrilhaLevel    ;
+  level: TrilhaLevel;
   circuitMap: string;
   contacts: {
     phone1?: string;

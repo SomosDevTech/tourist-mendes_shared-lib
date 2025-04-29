@@ -1,32 +1,34 @@
-import { AtracaoLocalCategoryType, BairroType, DataType } from "../public/typesFiltrosPage";
+import { EventDate } from "../public/FullEventoType";
+import { BairroType, DataType, EventoCategoryType } from "../public/typesFiltrosPage";
 import { CreatedBy, UpdatedBy } from "./generalCmsTypes";
 
-export interface AtracaoLocalCmsType {
+export interface EventoCmsType {
   id: string;
   status: boolean;
   title: string;
-  category: AtracaoLocalCategoryType;
+  category: EventoCategoryType;
   neighborhood: BairroType;
+  eventDate: EventDate;
   author: CreatedBy;
   registrationDate: Date;
   lastUpdate: UpdatedBy;
 }
 
-export interface AtracaoLocalCmsFiltersType {
-  category: AtracaoLocalCategoryType[];
+export interface EventoCmsFiltersType {
+  category: EventoCategoryType[];
   neighborhood: BairroType[];
   author: CreatedBy[];
-  date?: DataType[];
+  date: DataType[];
 }
 
-export interface RegisteredAtracaoLocalCmsType {
+
+export interface RegisteredEventoCmsType {
   status: boolean;
   title: string;
-  category: AtracaoLocalCategoryType;
+  categoryId: string;
+  about: string;
+  history: string;
   shortDescription: string;
-  longDescription: string;
-  historicalInfo: string;
-  workingTime: string;
   contacts: {
     phone1?: string;
     phone2?: string;
@@ -39,18 +41,17 @@ export interface RegisteredAtracaoLocalCmsType {
     whatsapp?: string;
     twitter?: string;
   };
+  schedule: EventDate[];
   address: { // endereço obrigatório
     street: string;
     number: string;
     complement: string;
     zipCode: string;
+    latitude: number;
+    longitude: number;
   };
-  neighborhood: {
-    id: string;
-    name: string;
-  };
-  coverImage?: File;
-  photos: File[]; // regra: min 2 fotos
-  videos?: File[]; // Videos opcionais
-  tour360UrlLink?: File;
+  neighborhoodId: string;
+  coverImage: File;
+  photos?: File[]; 
+  videos?: File[]; 
 }

@@ -16,14 +16,17 @@ export interface PayloadUsuarioTokenType {
 export interface CadastroUsarioType {
   username: string;
   email: string;
-  password: string;
+}
+
+export interface ForgotPasswordType {
+  email: string;
+}
+export interface RecoverPasswordType {
+  newPassword: string;
   confirmPassword: string;
 }
 
-export interface ForgotPassword {
-  email: string;
-}
-export interface RecoverPassword {
+export interface RegisterFinalizedType {
   currentPassword: string;
   newPassword: string;
   confirmPassword: string;

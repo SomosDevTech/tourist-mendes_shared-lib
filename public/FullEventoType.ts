@@ -1,7 +1,7 @@
 import { ImageData, VideoData } from "./generalTypes";
 
 export interface EventDate {
-  date: string;
+  date: string; 
   startTime: string;
   finalTime: string;
 };
