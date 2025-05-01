@@ -55,7 +55,7 @@ export interface TrilhaHighlightCmsHomeType {
 }
 
 export interface UpdateTrilhaHighlightCmsHomeType {
-  trilhalId: string;
+  trilhaId: string;
 }
 
 export interface EventoHighlightCmsHomeType {
