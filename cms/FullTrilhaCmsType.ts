@@ -17,13 +17,13 @@ export default interface FullTrilhaCmsType {
   duration: number;
   level: TrilhaLevel;
   circuitMap: string;
-  contacts: {
+  contacts: { 
     phone1?: string;
     phone2?: string;
     email1?: string;
     email2?: string;
   };
-  address: { // endereço obrigatório  
+  address?: { // endereço opcional
     street: string;
     number: string;
     complement: string;
