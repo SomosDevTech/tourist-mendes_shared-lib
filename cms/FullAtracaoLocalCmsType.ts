@@ -31,11 +31,21 @@ export default interface FullAtracaoLocalCmsType {
     id: string;
     name: string;
   };
-  coverImage?: File;
-  photos: File[]; // regra: min 2 fotos
-  videos?: File[]; // Videos opcionais
+  coverImage?: ImageCmsData;
+  photos: ImageCmsData[]; // regra: min 2 fotos
+  videos?: VideoCmsData[]; // Videos opcionais
   tour360UrlLink?: File;
   registeredById: string;
   updatedById?: string;
   deletedById?: string;
+}
+
+export interface ImageCmsData {
+  data: File,
+  altDescription: string
+}
+
+export interface VideoCmsData {
+  data: File,
+  altDescription: string
 }
