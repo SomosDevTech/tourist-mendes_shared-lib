@@ -22,6 +22,7 @@ export interface TrilhaCmsFiltersType {
 
 
 export default interface RegisteredTrilhaCmsType {
+  id: string;
   status: boolean;
   title: string;
   categoryId: string;

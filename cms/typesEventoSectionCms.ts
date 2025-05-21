@@ -23,6 +23,7 @@ export interface EventoCmsFiltersType {
 
 
 export interface RegisteredEventoCmsType {
+  id: string;
   status: boolean;
   title: string;
   categoryId: string;

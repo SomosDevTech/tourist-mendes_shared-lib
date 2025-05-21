@@ -20,6 +20,7 @@ export interface AtracaoLocalCmsFiltersType {
 }
 
 export interface RegisteredAtracaoLocalCmsType {
+  id: string;
   status: boolean;
   title: string;
   category: AtracaoLocalCategoryType;
