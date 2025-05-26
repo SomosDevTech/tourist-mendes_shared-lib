@@ -15,7 +15,7 @@ export default interface FullTrilhaType {
   workingTime: string;
   contacts: {
     phoneNumbers?: string[];
-    address: string;
+    address?: string;
   };
   coverImage: ImageData;
   photoGallery?: ImageData[];
