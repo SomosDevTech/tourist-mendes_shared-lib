@@ -1,4 +1,4 @@
-import { Role } from "@/config/prisma/generatedFiles";
+export type Role = "SUPER_ADMIN" | "ADMIN" | "TECH_MANAGER";
 
 export interface FullUsuarioCmsType {
   id: string;

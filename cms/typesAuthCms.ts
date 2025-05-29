@@ -1,4 +1,4 @@
-import { Role } from "@/config/prisma/generatedFiles";
+import { Role } from "./FullUsuarioCmsType";
 
 export interface UsuarioLoginType {
   email: string;

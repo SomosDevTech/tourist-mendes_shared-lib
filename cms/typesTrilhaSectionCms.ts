@@ -1,4 +1,4 @@
-import { AtracaoLocalCategoryType, BairroType, DataType, TrilhaCategoryType } from "../public/typesFiltrosPage";
+import { DataType, TrilhaCategoryType } from "../public/typesFiltrosPage";
 import { CreatedBy, UpdatedBy } from "./generalCmsTypes";
 
 type DifficultyLevel = "Fácil" | "Moderada" | "Difícil" | "Muito Difícil" | "Experts";
