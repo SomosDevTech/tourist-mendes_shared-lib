@@ -1,4 +1,4 @@
-import { Role } from "@/config/prisma/generatedFiles";
+import { Role } from "@prisma/client";
 
 export interface FullUsuarioCmsType {
   id: string;

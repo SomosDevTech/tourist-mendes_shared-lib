@@ -1,4 +1,4 @@
-import { TrilhaLevel } from "@/config/prisma/generatedFiles";
+import { TrilhaLevel } from "@prisma/client";
 
 export default interface FullTrilhaCmsType {
   status: boolean;
@@ -17,7 +17,7 @@ export default interface FullTrilhaCmsType {
   duration: number;
   level: TrilhaLevel;
   circuitMap: string;
-  contacts: { 
+  contacts: {
     phone1?: string;
     phone2?: string;
     email1?: string;

@@ -6,7 +6,7 @@ export interface CreatedBy {
 
 export interface UpdatedBy {
   id: string;
-  name: string;
+  username: string;
   updatedAt: Date;
 }
 
