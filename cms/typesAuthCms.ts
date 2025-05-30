@@ -1,4 +1,4 @@
-import { Role } from "@prisma/client";
+import { Role } from "./FullUsuarioCmsType";
 
 export interface UsuarioLoginType {
   email: string;

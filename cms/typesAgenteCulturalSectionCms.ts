@@ -1,4 +1,4 @@
-import { AgenteCulturalCategoryType, AreaDeAtuacaoType, AtracaoLocalCategoryType, BairroType, DataType } from "../public/typesFiltrosPage";
+import { AgenteCulturalCategoryType, AreaDeAtuacaoType, AtracaoLocalCategoryType, DataType } from "../public/typesFiltrosPage";
 import { CreatedBy, UpdatedBy } from "./generalCmsTypes";
 
 export interface AgenteCulturalCmsType {

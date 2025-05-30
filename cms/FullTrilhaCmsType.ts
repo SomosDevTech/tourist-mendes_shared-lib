@@ -1,4 +1,4 @@
-import { TrilhaLevel } from "@prisma/client";
+export type TrilhaLevel = "EASY" | "MODERATE" | "HARD" | "VERY_HARD" | "EXPERIENCED_ONLY";
 
 export default interface FullTrilhaCmsType {
   status: boolean;
