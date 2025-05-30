@@ -19,6 +19,7 @@ export interface AgenteCulturalCmsFiltersType {
 }
 
 export interface RegisteredAgenteCulturalCmsType {
+  id: string;
   status: boolean;
   name: string;
   category: AgenteCulturalCategoryType;

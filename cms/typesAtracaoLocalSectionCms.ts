@@ -9,7 +9,7 @@ export interface AtracaoLocalCmsType {
   neighborhood: BairroType;
   author: CreatedBy;
   registrationDate: Date;
-  lastUpdate: UpdatedBy;
+  lastUpdate?: UpdatedBy;
 }
 
 export interface AtracaoLocalCmsFiltersType {
@@ -20,6 +20,7 @@ export interface AtracaoLocalCmsFiltersType {
 }
 
 export interface RegisteredAtracaoLocalCmsType {
+  id: string;
   status: boolean;
   title: string;
   category: AtracaoLocalCategoryType;
