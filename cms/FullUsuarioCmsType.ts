@@ -1,8 +1,5 @@
 export type Role = "SUPER_ADMIN" | "ADMIN" | "TECH_MANAGER";
-<<<<<<< HEAD
 
-=======
->>>>>>> fba7561f318a33f2a8341f8b92adec48c91cfb23
 export interface FullUsuarioCmsType {
   id: string;
   username: string;
