@@ -16,6 +16,7 @@ export interface RegisterBannerCmsHomeType {
   description?: string;
   redirectLink: string;
   image: File;
+  altDescription: string;
 }
 
 export interface AtracaoLocalHighlightCmsHomeType {
@@ -88,3 +89,4 @@ export interface SobreCmsHomeType {
     }
   };
 }
+

@@ -24,3 +24,12 @@ export interface EditUsarioLoggedAdminType {
   password: string;
   confirmPassword: string;
 }
+
+
+export interface UsuarioPageType {
+  id: string;
+  status: boolean;
+  name: string;
+  email: string;
+  createdAt: Date;
+}
