@@ -1,6 +1,7 @@
 import { ImageData, VideoData } from "./generalTypes";
 
 export default interface FullAtracaoLocalType {
+  id: string;
   title: string;
   category: string;
   longDescription: string[];
