@@ -8,7 +8,7 @@ export interface EventoCmsType {
   title: string;
   category: EventoCategoryType;
   neighborhood: BairroType;
-  eventDate: EventDate;
+  eventDate: EventDate[];
   author: CreatedBy;
   registrationDate: Date;
   lastUpdate: UpdatedBy;
