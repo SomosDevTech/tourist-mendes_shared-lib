@@ -1,5 +1,10 @@
-import { AtracaoLocalCategoryType, BairroType, DataType } from "../public/typesFiltrosPage";
-import { CreatedBy, UpdatedBy } from "./generalCmsTypes";
+import {
+  AtracaoLocalCategoryType,
+  BairroType,
+  DataType,
+} from "../public/typesFiltrosPage";
+import { EditImageCmsData } from "./FullAtracaoLocalCmsType";
+import { CreatedBy, RequestMediaCmsData, ResponseMediaCmsData, UpdatedBy } from "./generalCmsTypes";
 
 export interface AtracaoLocalCmsType {
   id: string;
@@ -9,7 +14,7 @@ export interface AtracaoLocalCmsType {
   neighborhood: BairroType;
   author: CreatedBy;
   registrationDate: Date;
-  lastUpdate?: UpdatedBy;
+  lastUpdate: UpdatedBy;
 }
 
 export interface AtracaoLocalCmsFiltersType {
@@ -40,7 +45,8 @@ export interface RegisteredAtracaoLocalCmsType {
     whatsapp?: string;
     twitter?: string;
   };
-  address: { // endereço obrigatório
+  address: {
+    // endereço obrigatório
     street: string;
     number: string;
     complement: string;
@@ -55,3 +61,87 @@ export interface RegisteredAtracaoLocalCmsType {
   videos?: File[]; // Videos opcionais
   tour360UrlLink?: File;
 }
+
+
+export interface RequestEditFullAtracaoLocalCmsType {
+  status?: boolean;
+  title?: string;
+  category?: AtracaoLocalCategoryType;
+  mapUrlLink?: string;
+  shortDescription?: string;
+  longDescription?: string;
+  historicalInfo?: string;
+  workingTime?: string;
+  contacts?: {
+    phone1?: string;
+    phone2?: string;
+    email1?: string;
+    email2?: string;
+    website?: string;
+    instagram?: string;
+    facebook?: string;
+    tiktok?: string;
+    whatsapp?: string;
+    twitter?: string;
+  };
+  address?: {
+    street: string;
+    number: string;
+    complement: string;
+    zipCode: string;
+  };
+  neighborhood?: {
+    id: string;
+    name: string;
+  };
+  coverImage?: File;
+  photos?: RequestMediaCmsData[] | File[];
+  videos?: RequestMediaCmsData[] | File[];
+  tour360UrlLink?: File;
+  registeredById: string;
+  updatedById?: string;
+  deletedById?: string;
+}
+
+export interface ResponseEditFullAtracaoLocalCmsType {
+  id: string;
+  status: boolean;
+  title: string;
+  category: AtracaoLocalCategoryType;
+  mapUrlLink: string;
+  shortDescription: string;
+  longDescription: string;
+  historicalInfo: string;
+  workingTime: string;
+  qrCodeImage: string;
+  contacts: {
+    phone1?: string;
+    phone2?: string;
+    email1?: string;
+    email2?: string;
+    website?: string;
+    instagram?: string;
+    facebook?: string;
+    tiktok?: string;
+    whatsapp?: string;
+    twitter?: string;
+  };
+  address: {
+    street: string;
+    number: string;
+    complement: string;
+    zipCode: string;
+  };
+  neighborhood: {
+    id: string;
+    name: string;
+  };
+  coverImage?: ResponseMediaCmsData;
+  photos: ResponseMediaCmsData[]; 
+  videos?: ResponseMediaCmsData[]; 
+  tour360UrlLink?: File;
+  registeredById: string;
+  updatedById?: string;
+  deletedById?: string;
+}
+

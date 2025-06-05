@@ -1,5 +1,5 @@
 import { DataType, TrilhaCategoryType } from "../public/typesFiltrosPage";
-import { CreatedBy, UpdatedBy } from "./generalCmsTypes";
+import { CreatedBy, RequestMediaCmsData, ResponseMediaCmsData, UpdatedBy } from "./generalCmsTypes";
 
 type DifficultyLevel = "Fácil" | "Moderada" | "Difícil" | "Muito Difícil" | "Experts";
 
@@ -52,4 +52,72 @@ export default interface RegisteredTrilhaCmsType {
   photoGallery?: File[]; 
   videos?: File[]; 
   tour360UrlLink?: File;
+}
+
+
+export interface RequestEditTrilhaCmsType {
+  id: string;
+  status?: boolean;
+  title?: string;
+  categoryId?: string;
+  shortDescription?: string;
+  longDescription?: string;
+  historicalInfo?: string;
+  workingTime?: string;
+  moreInfosLink?: string;
+  extension?: number;
+  duration?: number;
+  level?: DifficultyLevel;
+  circuitMap?: File;
+  contacts?: {
+    phone1?: string;
+    phone2?: string;
+    email1?: string;
+    email2?: string;
+  };
+  address?: { 
+    street: string; 
+    number: string;
+    complement: string;
+    zipCode: string;
+  };
+  neighborhoodId?: string;
+  coverImage?: File;
+  photos?: RequestMediaCmsData[] | File[]; 
+  videos?: RequestMediaCmsData[] | File[]; 
+  tour360UrlLink?: File;
+}
+
+
+export interface ResponseEditTrilhaCmsType {
+  id: string;
+  status: boolean;
+  title: string;
+  categoryId?: string;
+  shortDescription: string;
+  longDescription: string;
+  historicalInfo: string;
+  workingTime: string;
+  moreInfosLink: string;
+  qrCodeImage: string;
+  extension: number;
+  duration: number;
+  level: DifficultyLevel;
+  circuitMap: File;
+  contacts: {
+    phone1?: string;
+    phone2?: string;
+    email1?: string;
+    email2?: string;
+  };
+  address: { 
+    street: string; 
+    number: string;
+    complement: string;
+    zipCode: string;
+  };
+  neighborhoodId: string;
+  coverImage: ResponseMediaCmsData;
+  photoGallery?: ResponseMediaCmsData[]; 
+  videos: ResponseMediaCmsData[]; 
 }

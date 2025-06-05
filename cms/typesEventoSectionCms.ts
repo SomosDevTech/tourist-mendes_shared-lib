@@ -1,6 +1,6 @@
-import { EventDate } from "../public/FullEventoType";
+import { EventDate, ResponseEventDate } from "../public/FullEventoType";
 import { BairroType, DataType, EventoCategoryType } from "../public/typesFiltrosPage";
-import { CreatedBy, UpdatedBy } from "./generalCmsTypes";
+import { CreatedBy, RequestMediaCmsData, ResponseMediaCmsData, UpdatedBy } from "./generalCmsTypes";
 
 export interface EventoCmsType {
   id: string;
@@ -8,10 +8,13 @@ export interface EventoCmsType {
   title: string;
   category: EventoCategoryType;
   neighborhood: BairroType;
-  eventDate: EventDate[];
+  eventDate: {
+    from: string;
+    to: string;
+  };
   author: CreatedBy;
   registrationDate: Date;
-  lastUpdate: UpdatedBy;
+  lastUpdate?: UpdatedBy;
 }
 
 export interface EventoCmsFiltersType {
@@ -53,6 +56,78 @@ export interface RegisteredEventoCmsType {
   };
   neighborhoodId: string;
   coverImage: File;
-  photos?: File[]; 
-  videos?: File[]; 
+  photos?: File[];
+  videos?: File[];
+}
+
+
+export interface RequestEditEventoCmsType {
+  id: string;
+  status?: boolean;
+  title?: string;
+  categoryId?: string;
+  about?: string;
+  history?: string;
+  shortDescription?: string;
+  contacts?: {
+    phone1?: string;
+    phone2?: string;
+    email1?: string;
+    email2?: string;
+    website?: string;
+    instagram?: string;
+    facebook?: string;
+    tiktok?: string;
+    whatsapp?: string;
+    twitter?: string;
+  };
+  schedule: EventDate[];
+  address?: {
+    street: string;
+    number: string;
+    complement: string;
+    zipCode: string;
+    latitude: number;
+    longitude: number;
+  };
+  neighborhoodId?: string;
+  coverImage: File;
+  photos?: RequestMediaCmsData[] | File[];
+  videos?: RequestMediaCmsData[] | File[];
+}
+
+export interface ResponseEditEventoCmsType {
+  id: string;
+  status: boolean;
+  title: string;
+  categoryId: string;
+  about: string;
+  history: string;
+  shortDescription: string;
+  qrCodeImage: string;
+  contacts: {
+    phone1?: string;
+    phone2?: string;
+    email1?: string;
+    email2?: string;
+    website?: string;
+    instagram?: string;
+    facebook?: string;
+    tiktok?: string;
+    whatsapp?: string;
+    twitter?: string;
+  };
+  eventDate: ResponseEventDate;
+  address: {
+    street: string;
+    number: string;
+    complement: string;
+    zipCode: string;
+    latitude: number;
+    longitude: number;
+  };
+  neighborhoodId: string;
+  coverImage: ResponseMediaCmsData;
+  photos: ResponseMediaCmsData[];
+  videos: ResponseMediaCmsData[];
 }

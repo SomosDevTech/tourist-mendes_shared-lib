@@ -3,7 +3,7 @@ import { AtracaoLocalCategoryType } from "../public/typesFiltrosPage";
 export default interface FullAtracaoLocalCmsType {
   status: boolean;
   title: string;
-  category: AtracaoLocalCategoryType
+  category: AtracaoLocalCategoryType;
   mapUrlLink: string;
   shortDescription: string;
   longDescription: string;
@@ -21,7 +21,8 @@ export default interface FullAtracaoLocalCmsType {
     whatsapp?: string;
     twitter?: string;
   };
-  address: { // endereço obrigatório
+  address: {
+    // endereço obrigatório
     street: string;
     number: string;
     complement: string;
@@ -41,11 +42,25 @@ export default interface FullAtracaoLocalCmsType {
 }
 
 export interface ImageCmsData {
-  data: File,
-  altDescription: string
+  data: File;
+  altDescription: string;
+}
+
+export interface EditImageCmsData {
+  id: string;
+  data: File;
+  altDescription: string;
 }
 
 export interface VideoCmsData {
-  data: File,
-  altDescription: string
+  data: File;
+  altDescription: string;
 }
+
+export interface EditVideoCmsData {
+  id: string;
+  data: File;
+  altDescription: string;
+}
+
+

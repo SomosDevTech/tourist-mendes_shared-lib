@@ -1,7 +1,7 @@
 import { ImageData, VideoData } from "./generalTypes";
 
 export interface EventDate {
-  date: string; 
+  date: string;
   startTime: string;
   finalTime: string;
 };
@@ -30,3 +30,14 @@ export default interface FullEventoType {
   videos?: VideoData[];
   mapUrlLink: string;
 }
+
+export interface ResponseEventDate {
+  to: string;
+  from: string;
+};
+
+export interface RequestEventDate {
+  date: string;
+  startTime: string;
+  finalTime: string;
+};
