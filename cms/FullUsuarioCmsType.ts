@@ -34,3 +34,9 @@ export interface UsuarioPageType {
   email: string;
   createdAt: Date;
 }
+
+export interface AutorType {
+  id: string;
+  username: string;
+  role: Role;
+}
