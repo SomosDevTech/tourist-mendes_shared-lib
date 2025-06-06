@@ -93,7 +93,7 @@ export interface ResponseEditTrilhaCmsType {
   id: string;
   status: boolean;
   title: string;
-  categoryId?: string;
+  categoryId: string;
   shortDescription: string;
   longDescription: string;
   historicalInfo: string;
@@ -110,14 +110,17 @@ export interface ResponseEditTrilhaCmsType {
     email1?: string;
     email2?: string;
   };
-  address: { 
+  address?: { 
     street: string; 
     number: string;
     complement: string;
     zipCode: string;
   };
-  neighborhoodId: string;
+  neighborhood?: {
+    id: string;
+    name: string;
+  };
   coverImage: ResponseMediaCmsData;
-  photoGallery?: ResponseMediaCmsData[]; 
-  videos: ResponseMediaCmsData[]; 
+  photos?: ResponseMediaCmsData[]; 
+  videos?: ResponseMediaCmsData[]; 
 }

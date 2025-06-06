@@ -81,7 +81,7 @@ export interface RequestEditEventoCmsType {
     whatsapp?: string;
     twitter?: string;
   };
-  schedule: EventDate[];
+  schedule?: EventDate[];
   address?: {
     street: string;
     number: string;
@@ -91,7 +91,7 @@ export interface RequestEditEventoCmsType {
     longitude: number;
   };
   neighborhoodId?: string;
-  coverImage: File;
+  coverImage?: File;
   photos?: RequestMediaCmsData[] | File[];
   videos?: RequestMediaCmsData[] | File[];
 }
@@ -126,8 +126,11 @@ export interface ResponseEditEventoCmsType {
     latitude: number;
     longitude: number;
   };
-  neighborhoodId: string;
+  neighborhood: {
+    id: string;
+    namse: string;
+  };
   coverImage: ResponseMediaCmsData;
-  photos: ResponseMediaCmsData[];
-  videos: ResponseMediaCmsData[];
+  photos?: ResponseMediaCmsData[];
+  videos?: ResponseMediaCmsData[];
 }
