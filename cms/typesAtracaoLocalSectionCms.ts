@@ -3,7 +3,6 @@ import {
   BairroType,
   DataType,
 } from "../public/typesFiltrosPage";
-import { EditImageCmsData } from "./FullAtracaoLocalCmsType";
 import { CreatedBy, RequestMediaCmsData, ResponseMediaCmsData, UpdatedBy } from "./generalCmsTypes";
 
 export interface AtracaoLocalCmsType {
