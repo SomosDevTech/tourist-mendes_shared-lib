@@ -36,6 +36,7 @@ export interface EventHomeCard {
 }
 
 export interface AboutSessionData {
+  id?: string;
   aboutDescription: string[];
   emails: string[];
   phoneNumbers: string[];

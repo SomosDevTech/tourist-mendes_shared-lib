@@ -74,6 +74,7 @@ export interface UpdateEventoHighlightCmsHomeType {
 }
 
 export interface SobreCmsHomeType {
+  id: string;
   description: string;
   contacts: {
     email1: string;
@@ -84,7 +85,10 @@ export interface SobreCmsHomeType {
       street: string;
       number: string;
       complement: string;
-      neighborhoodId: string;
+      neighborhood: {
+        id: string;
+        name: string;
+      };
       zipCode: string;
     }
   };

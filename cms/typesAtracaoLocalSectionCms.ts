@@ -14,7 +14,7 @@ export interface AtracaoLocalCmsType {
   neighborhood: BairroType;
   author: CreatedBy;
   registrationDate: Date;
-  lastUpdate: UpdatedBy;
+  lastUpdate?: UpdatedBy;
 }
 
 export interface AtracaoLocalCmsFiltersType {
