@@ -10,15 +10,12 @@ export interface UpdatedBy {
   updatedAt: Date;
 }
 
-
-
 export interface RequestMediaCmsData {
   id: string;
   data: File;
   altDescription: string;
   action: 'UPDATE' | 'DELETE';
 }
-
 
 export interface ResponseMediaCmsData {
   id: string;
