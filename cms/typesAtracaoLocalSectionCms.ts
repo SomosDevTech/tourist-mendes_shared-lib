@@ -58,7 +58,7 @@ export interface RegisteredAtracaoLocalCmsType {
   coverImage?: File;
   photos: File[]; // regra: min 2 fotos
   videos?: File[]; // Videos opcionais
-  tour360UrlLink?: File;
+  tour360?: File;
 }
 
 
@@ -96,7 +96,7 @@ export interface RequestEditFullAtracaoLocalCmsType {
   coverImage?: File;
   photos?: RequestMediaCmsData[] | File[];
   videos?: RequestMediaCmsData[] | File[];
-  tour360UrlLink?: File;
+  tour360?: File;
   registeredById: string;
   updatedById?: string;
   deletedById?: string;

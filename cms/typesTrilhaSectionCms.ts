@@ -51,7 +51,7 @@ export default interface RegisteredTrilhaCmsType {
   coverImage: File;
   photoGallery?: File[]; 
   videos?: File[]; 
-  tour360UrlLink?: File;
+  tour360?: File;
 }
 
 
@@ -85,7 +85,7 @@ export interface RequestEditTrilhaCmsType {
   coverImage?: File;
   photos?: RequestMediaCmsData[] | File[]; 
   videos?: RequestMediaCmsData[] | File[]; 
-  tour360UrlLink?: File;
+  tour360?: File;
 }
 
 
