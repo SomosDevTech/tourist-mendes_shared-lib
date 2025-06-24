@@ -85,7 +85,7 @@ export interface RequestEditTrilhaCmsType {
   coverImage?: File;
   photos?: RequestMediaCmsData[] | File[]; 
   videos?: RequestMediaCmsData[] | File[]; 
-  tour360?: File;
+  tour360UrlLink?: File;
 }
 
 

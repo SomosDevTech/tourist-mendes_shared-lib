@@ -41,5 +41,6 @@ export interface AboutSessionData {
   emails: string[];
   phoneNumbers: string[];
   address: string;
+  zipCode?: string;
 }
 
