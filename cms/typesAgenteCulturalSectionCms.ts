@@ -1,5 +1,10 @@
-import { AgenteCulturalCategoryType, AreaDeAtuacaoType, AtracaoLocalCategoryType, DataType } from "../public/typesFiltrosPage";
-import { CreatedBy, RequestMediaCmsData, ResponseMediaCmsData, UpdatedBy } from "./generalCmsTypes";
+import {
+  AgenteCulturalCategoryType,
+  AreaDeAtuacaoType,
+  AtracaoLocalCategoryType,
+  DataType,
+} from '../public/typesFiltrosPage';
+import { CreatedBy, RequestMediaCmsData, ResponseMediaCmsData, UpdatedBy } from './generalCmsTypes';
 
 export interface AgenteCulturalCmsType {
   id: string;
@@ -28,9 +33,9 @@ export interface RegisteredAgenteCulturalCmsType {
   myContributions: string;
   areasOfExpert: string[]; // de 1 a 5
   contacts: {
-    phone1: string;  // obrigatorio ao menos 1 telefone
+    phone1: string; // obrigatorio ao menos 1 telefone
     phone2?: string;
-    email1: string;  // obrigatorio ao menos 1 email
+    email1: string; // obrigatorio ao menos 1 email
     email2?: string;
     website?: string;
     instagram?: string;
@@ -39,7 +44,8 @@ export interface RegisteredAgenteCulturalCmsType {
     whatsapp?: string;
     twitter?: string;
   };
-  address?: { // Endereço opcional
+  address?: {
+    // Endereço opcional
     street: string;
     number: string;
     complement: string;
@@ -63,11 +69,11 @@ export interface RequestEditAgenteCulturalCmsType {
   shortDescription?: string;
   aboutMe?: string;
   myContributions?: string;
-  areasOfExpert?: string[]; 
+  areasOfExpert?: string[];
   contacts?: {
-    phone1: string; 
+    phone1: string;
     phone2?: string;
-    email1: string; 
+    email1: string;
     email2?: string;
     website?: string;
     instagram?: string;
@@ -76,7 +82,7 @@ export interface RequestEditAgenteCulturalCmsType {
     whatsapp?: string;
     twitter?: string;
   };
-  address?: { 
+  address?: {
     street: string;
     number: string;
     complement: string;
@@ -88,8 +94,8 @@ export interface RequestEditAgenteCulturalCmsType {
   };
   coverImage?: File;
   profileImage?: File;
-  photos?: RequestMediaCmsData[] | File[]; 
-  videos?: RequestMediaCmsData[] | File[]; 
+  photos?: RequestMediaCmsData[] | File[];
+  videos?: RequestMediaCmsData[] | File[];
 }
 
 export interface ResponseEditAgenteCulturalCmsType {
@@ -100,11 +106,11 @@ export interface ResponseEditAgenteCulturalCmsType {
   shortDescription: string;
   aboutMe: string;
   myContributions: string;
-  areasOfExpert: string[]; 
+  areasOfExpert: string[];
   contacts: {
-    phone1: string; 
+    phone1: string;
     phone2?: string;
-    email1: string; 
+    email1: string;
     email2?: string;
     website?: string;
     instagram?: string;
@@ -113,7 +119,7 @@ export interface ResponseEditAgenteCulturalCmsType {
     whatsapp?: string;
     twitter?: string;
   };
-  address: { 
+  address: {
     street: string;
     number: string;
     complement: string;
@@ -125,6 +131,8 @@ export interface ResponseEditAgenteCulturalCmsType {
   };
   coverImage: ResponseMediaCmsData;
   profileImage: ResponseMediaCmsData;
-  photos?: ResponseMediaCmsData[]; 
-  videos?: ResponseMediaCmsData[]; 
+  photos?: ResponseMediaCmsData[];
+  videos?: ResponseMediaCmsData[];
+  tour360UrlLink?: string;
+  tour360Id?: string;
 }

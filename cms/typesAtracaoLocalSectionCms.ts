@@ -1,9 +1,5 @@
-import {
-  AtracaoLocalCategoryType,
-  BairroType,
-  DataType,
-} from "../public/typesFiltrosPage";
-import { CreatedBy, RequestMediaCmsData, ResponseMediaCmsData, UpdatedBy } from "./generalCmsTypes";
+import { AtracaoLocalCategoryType, BairroType, DataType } from '../public/typesFiltrosPage';
+import { CreatedBy, RequestMediaCmsData, ResponseMediaCmsData, UpdatedBy } from './generalCmsTypes';
 
 export interface AtracaoLocalCmsType {
   id: string;
@@ -60,7 +56,6 @@ export interface RegisteredAtracaoLocalCmsType {
   videos?: File[]; // Videos opcionais
   tour360?: File;
 }
-
 
 export interface RequestEditFullAtracaoLocalCmsType {
   status?: boolean;
@@ -136,11 +131,11 @@ export interface ResponseEditFullAtracaoLocalCmsType {
     name: string;
   };
   coverImage: ResponseMediaCmsData;
-  photos: ResponseMediaCmsData[]; 
-  videos?: ResponseMediaCmsData[]; 
-  tour360UrlLink?: File;
+  photos: ResponseMediaCmsData[];
+  videos?: ResponseMediaCmsData[];
+  tour360UrlLink?: string;
+  tour360Id?: string;
   registeredById: string;
   updatedById?: string;
   deletedById?: string;
 }
-

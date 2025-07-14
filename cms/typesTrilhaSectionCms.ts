@@ -1,7 +1,7 @@
-import { DataType, TrilhaCategoryType } from "../public/typesFiltrosPage";
-import { CreatedBy, RequestMediaCmsData, ResponseMediaCmsData, UpdatedBy } from "./generalCmsTypes";
+import { DataType, TrilhaCategoryType } from '../public/typesFiltrosPage';
+import { CreatedBy, RequestMediaCmsData, ResponseMediaCmsData, UpdatedBy } from './generalCmsTypes';
 
-type DifficultyLevel = "Fácil" | "Moderada" | "Difícil" | "Muito Difícil" | "Experts";
+type DifficultyLevel = 'Fácil' | 'Moderada' | 'Difícil' | 'Muito Difícil' | 'Experts';
 
 export interface TrilhaCmsType {
   id: string;
@@ -19,7 +19,6 @@ export interface TrilhaCmsFiltersType {
   author: CreatedBy[];
   date: DataType[];
 }
-
 
 export default interface RegisteredTrilhaCmsType {
   id: string;
@@ -41,19 +40,19 @@ export default interface RegisteredTrilhaCmsType {
     email1?: string;
     email2?: string;
   };
-  address: { // endereço obrigatório  
-    street: string; 
+  address: {
+    // endereço obrigatório
+    street: string;
     number: string;
     complement: string;
     zipCode: string;
   };
   neighborhoodId: string;
   coverImage: File;
-  photoGallery?: File[]; 
-  videos?: File[]; 
+  photoGallery?: File[];
+  videos?: File[];
   tour360?: File;
 }
-
 
 export interface RequestEditTrilhaCmsType {
   id: string;
@@ -75,19 +74,18 @@ export interface RequestEditTrilhaCmsType {
     email1?: string;
     email2?: string;
   };
-  address?: { 
-    street: string; 
+  address?: {
+    street: string;
     number: string;
     complement: string;
     zipCode: string;
   };
   neighborhoodId?: string;
   coverImage?: File;
-  photos?: RequestMediaCmsData[] | File[]; 
-  videos?: RequestMediaCmsData[] | File[]; 
+  photos?: RequestMediaCmsData[] | File[];
+  videos?: RequestMediaCmsData[] | File[];
   tour360UrlLink?: File;
 }
-
 
 export interface ResponseEditTrilhaCmsType {
   id: string;
@@ -110,8 +108,8 @@ export interface ResponseEditTrilhaCmsType {
     email1?: string;
     email2?: string;
   };
-  address?: { 
-    street: string; 
+  address?: {
+    street: string;
     number: string;
     complement: string;
     zipCode: string;
@@ -121,6 +119,8 @@ export interface ResponseEditTrilhaCmsType {
     name: string;
   };
   coverImage: ResponseMediaCmsData;
-  photos?: ResponseMediaCmsData[]; 
-  videos?: ResponseMediaCmsData[]; 
+  photos?: ResponseMediaCmsData[];
+  videos?: ResponseMediaCmsData[];
+  tour360UrlLink?: string;
+  tour360Id?: string;
 }
