@@ -2,6 +2,7 @@ import { EventDate } from "../public/FullEventoType";
 import { TrilhaInfo } from "../public/FullTrilhaType";
 import { ImageData } from "../public/generalTypes";
 import { AgenteCulturalCategoryType, AtracaoLocalCategoryType, BairroType, EventoCategoryType, TrilhaCategoryType } from '../public/typesFiltrosPage';
+import { CreatedBy, UpdatedBy } from "./generalCmsTypes";
 
 export interface BannerCmsHomeType {
   id: string
@@ -17,6 +18,22 @@ export interface RegisterBannerCmsHomeType {
   redirectLink: string;
   image: File;
   altDescription: string;
+}
+
+export interface ListBannerCmsHomeType {
+  id: string;
+  status: boolean;
+  name: string;
+  description: string;
+  redirectLink: string;
+  createdAt: Date;
+  updateAt: Date;
+  image: {
+    linkUrl: string;
+    altDescription: string;
+  };
+  registeredBy: CreatedBy;
+  updatedBy: UpdatedBy | null;
 }
 
 export interface AtracaoLocalHighlightCmsHomeType {

@@ -63,11 +63,13 @@ export interface RequestEditAgenteCulturalCmsType {
   shortDescription?: string;
   aboutMe?: string;
   myContributions?: string;
-  areasOfExpert?: string[]; 
+  areasOfExpert?: string[];
+  tour360UrlLink?: File;
+  tour360Id?: string;
   contacts?: {
-    phone1: string; 
+    phone1: string;
     phone2?: string;
-    email1: string; 
+    email1: string;
     email2?: string;
     website?: string;
     instagram?: string;
@@ -76,7 +78,7 @@ export interface RequestEditAgenteCulturalCmsType {
     whatsapp?: string;
     twitter?: string;
   };
-  address?: { 
+  address?: {
     street: string;
     number: string;
     complement: string;
@@ -88,8 +90,8 @@ export interface RequestEditAgenteCulturalCmsType {
   };
   coverImage?: File;
   profileImage?: File;
-  photos?: RequestMediaCmsData[] | File[]; 
-  videos?: RequestMediaCmsData[] | File[]; 
+  photos?: RequestMediaCmsData[] | File[];
+  videos?: RequestMediaCmsData[] | File[];
 }
 
 export interface ResponseEditAgenteCulturalCmsType {
@@ -100,11 +102,11 @@ export interface ResponseEditAgenteCulturalCmsType {
   shortDescription: string;
   aboutMe: string;
   myContributions: string;
-  areasOfExpert: string[]; 
+  areasOfExpert: string[];
   contacts: {
-    phone1: string; 
+    phone1: string;
     phone2?: string;
-    email1: string; 
+    email1: string;
     email2?: string;
     website?: string;
     instagram?: string;
@@ -113,7 +115,7 @@ export interface ResponseEditAgenteCulturalCmsType {
     whatsapp?: string;
     twitter?: string;
   };
-  address: { 
+  address: {
     street: string;
     number: string;
     complement: string;
@@ -125,6 +127,6 @@ export interface ResponseEditAgenteCulturalCmsType {
   };
   coverImage: ResponseMediaCmsData;
   profileImage: ResponseMediaCmsData;
-  photos?: ResponseMediaCmsData[]; 
-  videos?: ResponseMediaCmsData[]; 
+  photos?: ResponseMediaCmsData[];
+  videos?: ResponseMediaCmsData[];
 }

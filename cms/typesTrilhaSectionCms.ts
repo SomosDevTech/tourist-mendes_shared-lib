@@ -104,6 +104,8 @@ export interface ResponseEditTrilhaCmsType {
   duration: number;
   level: DifficultyLevel;
   circuitMap: File;
+  tour360UrlLink?: string;
+  tour360Id?: string;
   contacts: {
     phone1?: string;
     phone2?: string;

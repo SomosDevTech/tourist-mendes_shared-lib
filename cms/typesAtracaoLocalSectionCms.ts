@@ -138,7 +138,8 @@ export interface ResponseEditFullAtracaoLocalCmsType {
   coverImage: ResponseMediaCmsData;
   photos: ResponseMediaCmsData[]; 
   videos?: ResponseMediaCmsData[]; 
-  tour360UrlLink?: File;
+  tour360UrlLink?: string;
+  tour360Id?: string;
   registeredById: string;
   updatedById?: string;
   deletedById?: string;
