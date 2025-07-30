@@ -126,6 +126,6 @@ export interface ResponseEditTrilhaCmsType {
     name: string;
   };
   coverImage: ResponseMediaCmsData;
-  photoGallery?: ResponseMediaCmsData[];
+  photoGallery: ResponseMediaCmsData[];
   videos?: ResponseMediaCmsData[];
 }
