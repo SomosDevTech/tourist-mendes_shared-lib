@@ -102,7 +102,7 @@ export interface ResponseEditAgenteCulturalCmsType {
   shortDescription: string;
   aboutMe: string;
   myContributions: string;
-  areasOfExpert: string[];
+  areasOfExpert: AreaDeAtuacaoType[];
   contacts: {
     phone1: string;
     phone2?: string;
@@ -115,18 +115,24 @@ export interface ResponseEditAgenteCulturalCmsType {
     whatsapp?: string;
     twitter?: string;
   };
-  address: {
+  address?: {
     street: string;
     number: string;
     complement: string;
     zipCode: string;
   };
-  neighborhood: {
+  neighborhood?: {
     name: string;
-    sortname: string;
+    id: string;
   };
+  tour360Id?: string;
+  tour360UrlLink?: string;
+  qrCodeImage: string;
+  registrationDate: string;
+  linkUrl: string;
   coverImage: ResponseMediaCmsData;
   profileImage: ResponseMediaCmsData;
-  photos?: ResponseMediaCmsData[];
+  photoGallery?: ResponseMediaCmsData[];
   videos?: ResponseMediaCmsData[];
+  registeredById: string;
 }
