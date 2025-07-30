@@ -90,7 +90,7 @@ export interface RequestEditAgenteCulturalCmsType {
   };
   coverImage?: File;
   profileImage?: File;
-  photos?: RequestMediaCmsData[] | File[];
+  photos: RequestMediaCmsData[] | File[];
   videos?: RequestMediaCmsData[] | File[];
 }
 
