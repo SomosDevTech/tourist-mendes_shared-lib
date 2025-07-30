@@ -1,5 +1,6 @@
 import { AgenteCulturalCategoryType } from "../public/typesFiltrosPage";
 
+
 export default interface FullAgenteCulturalCmsType {
   status: boolean;
   name: string;
