@@ -12,7 +12,7 @@ export default interface FullAgenteCulturalCmsType {
   qrCodeImage: string;
   linkUrl: string;
   contacts: {
-    phone1: string;  // obrigatorio ao menos 1 telefone
+    phone1: string;  //obrigatorio ao menos 1 telefone
     phone2?: string;
     email1: string;  // obrigatorio ao menos 1 email
     email2?: string;
@@ -26,7 +26,7 @@ export default interface FullAgenteCulturalCmsType {
   address?: { // Endereço opcional
     street: string;
     number: string;
-    complement: string;
+    complement: string ;
     zipCode: string;
     latitude: number;
     longitude: number;
@@ -35,6 +35,8 @@ export default interface FullAgenteCulturalCmsType {
     name: string;
     sortname: string;
   };
+
+  
   coverImage: File;
   profileImage: File;
   photoGallery: File[]; // regra: min 1 foto - max 6

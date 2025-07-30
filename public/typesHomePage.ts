@@ -20,6 +20,8 @@ export interface AgenteCulturalHomeCard {
   imageData: ImageData;
 }
 
+
+
 export interface TrilhasHomeCard {
   id: string;
   title: string;

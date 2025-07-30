@@ -42,15 +42,15 @@ export default interface RegisteredTrilhaCmsType {
     email2?: string;
   };
   address: { // endereço obrigatório  
-    street: string; 
+    street: string;
     number: string;
     complement: string;
     zipCode: string;
   };
   neighborhoodId: string;
   coverImage: File;
-  photoGallery?: File[]; 
-  videos?: File[]; 
+  photoGallery?: File[];
+  videos?: File[];
   tour360?: File;
 }
 
@@ -75,16 +75,16 @@ export interface RequestEditTrilhaCmsType {
     email1?: string;
     email2?: string;
   };
-  address?: { 
-    street: string; 
+  address?: {
+    street: string;
     number: string;
     complement: string;
     zipCode: string;
   };
   neighborhoodId?: string;
   coverImage?: File;
-  photos?: RequestMediaCmsData[] | File[]; 
-  videos?: RequestMediaCmsData[] | File[]; 
+  photos?: RequestMediaCmsData[] | File[];
+  videos?: RequestMediaCmsData[] | File[];
   tour360UrlLink?: File;
 }
 
@@ -93,17 +93,20 @@ export interface ResponseEditTrilhaCmsType {
   id: string;
   status: boolean;
   title: string;
-  categoryId: string;
+  category: {
+    name: string;
+    id: string;
+  };
   shortDescription: string;
   longDescription: string;
-  historicalInfo: string;
   workingTime: string;
   moreInfosLink: string;
   qrCodeImage: string;
+  linkUrl: string;
   extension: number;
   duration: number;
   level: DifficultyLevel;
-  circuitMap: File;
+  circuitMap: string;
   tour360UrlLink?: string;
   tour360Id?: string;
   contacts: {
@@ -112,8 +115,8 @@ export interface ResponseEditTrilhaCmsType {
     email1?: string;
     email2?: string;
   };
-  address?: { 
-    street: string; 
+  address?: {
+    street: string;
     number: string;
     complement: string;
     zipCode: string;
@@ -123,6 +126,6 @@ export interface ResponseEditTrilhaCmsType {
     name: string;
   };
   coverImage: ResponseMediaCmsData;
-  photos?: ResponseMediaCmsData[]; 
-  videos?: ResponseMediaCmsData[]; 
+  photoGallery?: ResponseMediaCmsData[];
+  videos?: ResponseMediaCmsData[];
 }
