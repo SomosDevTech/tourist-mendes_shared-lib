@@ -100,7 +100,10 @@ export interface ResponseEditEventoCmsType {
   id: string;
   status: boolean;
   title: string;
-  categoryId: string;
+  category: {
+    id: string;
+    name: string;
+  };
   about: string;
   history: string;
   shortDescription: string;
@@ -117,7 +120,18 @@ export interface ResponseEditEventoCmsType {
     whatsapp?: string;
     twitter?: string;
   };
-  eventDate: ResponseEventDate;
+  eventDate: {
+    from: {
+      date: string;
+      startTime: string;
+      endTime: string;
+    };
+    to: {
+      date: string;
+      startTime: string;
+      endTime: string;
+    };
+  };
   address: {
     street: string;
     number: string;
@@ -128,9 +142,17 @@ export interface ResponseEditEventoCmsType {
   };
   neighborhood: {
     id: string;
-    namse: string;
+    name: string;
   };
   coverImage: ResponseMediaCmsData;
   photos?: ResponseMediaCmsData[];
   videos?: ResponseMediaCmsData[];
+  registeredById: string;
+  updatedById: string;
+  registrationDate: string;
+  lastUpdate: {
+    id: string;
+    name: string;
+    updatedAt: string;
+  };
 }
