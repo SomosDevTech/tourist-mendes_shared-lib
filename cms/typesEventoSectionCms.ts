@@ -1,4 +1,4 @@
-import { EventDate, ResponseEventDate } from "../public/FullEventoType";
+import { EventDate } from "../public/FullEventoType";
 import { BairroType, DataType, EventoCategoryType } from "../public/typesFiltrosPage";
 import { CreatedBy, RequestMediaCmsData, ResponseMediaCmsData, UpdatedBy } from "./generalCmsTypes";
 
