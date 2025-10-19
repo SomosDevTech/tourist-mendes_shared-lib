@@ -1,6 +1,4 @@
 /**
-
-/**
  * Categoria de preferência do usuário
  */
 export interface CategoryPreference {
