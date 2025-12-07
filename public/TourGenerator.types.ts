@@ -51,6 +51,7 @@ export interface DayMapData {
   date: string;                  // Data do dia (YYYY-MM-DD)
   points: MapPoint[];            // Pontos do mapa para este dia
   gpxUrl?: string;               // URL para download do GPX deste dia específico
+
 }
 
 /**
