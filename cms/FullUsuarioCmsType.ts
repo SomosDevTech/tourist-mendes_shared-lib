@@ -1,4 +1,4 @@
-export type Role = "SUPER_ADMIN" | "ADMIN" | "TECH_MANAGER";
+export type Role = "SUPER_ADMIN" | "PLATFORM_ADMIN" | "TENANT_ADMIN" | "TENANT_MANAGER" | "ADMIN" | "TECH_MANAGER";
 
 export interface FullUsuarioCmsType {
   id: string;

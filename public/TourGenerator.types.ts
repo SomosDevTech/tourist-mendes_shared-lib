@@ -25,40 +25,34 @@ export interface GenerateTourRequest {
 }
 
 /**
- * Coordenadas geográficas
- */
-export interface Coordinates {
-  latitude: number;   // Latitude (ex: -22.5265)
-  longitude: number;  // Longitude (ex: -43.7334)
-}
-
-/**
- * Ponto no mapa (atração, evento, trilha, etc.)
+ * Ponto no mapa do roteiro
  */
 export interface MapPoint {
-  id: string;                    // ID único do item
-  title: string;                 // Título para exibição
+  id: string;                    // ID único do ponto (geralmente o slug)
+  title: string;                 // Nome do ponto
   type: 'attraction' | 'event' | 'trail' | 'gastronomy' | 'accommodation'; // Tipo do ponto
-  slug: string;                  // Slug para montar URL (ex: "centro-municipal-de-cultura")
-  coordinates: Coordinates;      // Coordenadas geográficas
+  slug: string;                  // Slug do ponto
+  coordinates: {                 // Coordenadas geográficas
+    latitude: number;
+    longitude: number;
+  };
 }
 
 /**
- * Dados do mapa para um dia específico
+ * Dados do mapa de um dia específico
  */
 export interface DayMapData {
   dayNumber: number;             // Número do dia (1, 2, 3...)
-  date: string;                  // Data do dia (YYYY-MM-DD)
-  points: MapPoint[];            // Pontos do mapa para este dia
-  gpxUrl?: string;               // URL para download do GPX deste dia específico
-
+  date: string;                  // Data no formato ISO (YYYY-MM-DD)
+  points: MapPoint[];            // Pontos do mapa do dia
+  gpxUrl?: string;               // URL para download do GPX do dia
 }
 
 /**
  * Dados completos do mapa do roteiro
  */
 export interface TourMapData {
-  days: DayMapData[];            // Dados de cada dia
+  days: DayMapData[];            // Dias do roteiro com seus pontos
 }
 
 /**
@@ -73,6 +67,6 @@ export interface GenerateTourResponse {
   generatedBy: 'ai' | 'fallback';    // Origem: IA (Gemini) ou gerador local (fallback)
   durationInDays: number;            // Total de dias da viagem
   preferences: CategoryPreference[]; // Preferências usadas na geração
-  mapData?: TourMapData;             // ✨ Dados do mapa (coordenadas, pontos por dia)
-  gpxUrl?: string;                   // ✨ URL para download do arquivo GPX (ex: "/api/tour-recommendation/gpx/abc123")
+  mapData?: TourMapData;             // Dados do mapa (opcional - pode não ter coordenadas)
+  gpxUrl?: string;                   // URL para download do GPX completo (opcional)
 }
