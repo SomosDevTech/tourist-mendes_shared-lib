@@ -111,3 +111,29 @@ export interface SobreCmsHomeType {
   };
 }
 
+export interface NossaHistoriaCmsHomeType {
+  id: string;
+  title: string | null;
+  body: string;
+  status: boolean;
+}
+
+export interface ComoChegarCmsHomeType {
+  id: string;
+  title: string | null;
+  instructions: string;
+  status: boolean;
+  address: {
+    street: string;
+    number: string;
+    complement: string;
+    neighborhood: {
+      id: string;
+      name: string;
+    };
+    zipCode: string;
+  };
+  latitude: number;
+  longitude: number;
+}
+

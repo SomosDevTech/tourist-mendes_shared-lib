@@ -46,3 +46,21 @@ export interface AboutSessionData {
   zipCode?: string;
 }
 
+export interface NossaHistoriaSessionData {
+  id?: string;
+  title: string | null;
+  body: string[];
+  status: boolean;
+}
+
+export interface ComoChegarSessionData {
+  id?: string;
+  title: string | null;
+  instructions: string[];
+  address: string;
+  zipCode?: string;
+  latitude: number;
+  longitude: number;
+  status: boolean;
+}
+
