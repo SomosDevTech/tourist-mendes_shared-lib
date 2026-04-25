@@ -51,6 +51,7 @@ export interface NossaHistoriaSessionData {
   title: string | null;
   body: string[];
   status: boolean;
+  imageData: ImageData;
 }
 
 export interface ComoChegarSessionData {
@@ -59,8 +60,7 @@ export interface ComoChegarSessionData {
   instructions: string[];
   address: string;
   zipCode?: string;
-  latitude: number;
-  longitude: number;
+  mapsUrl: string;
   status: boolean;
 }
 

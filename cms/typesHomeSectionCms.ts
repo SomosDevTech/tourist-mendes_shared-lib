@@ -116,6 +116,7 @@ export interface NossaHistoriaCmsHomeType {
   title: string | null;
   body: string;
   status: boolean;
+  imageData: ImageData;
 }
 
 export interface ComoChegarCmsHomeType {
@@ -133,7 +134,6 @@ export interface ComoChegarCmsHomeType {
     };
     zipCode: string;
   };
-  latitude: number;
-  longitude: number;
+  mapsUrl: string;
 }
 
