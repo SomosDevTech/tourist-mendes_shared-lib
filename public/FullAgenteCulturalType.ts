@@ -8,6 +8,7 @@ export default interface FullAgenteCulturalType {
   profileImg: ImageData;
   coverImg: ImageData;
   mapUrlLink?: string;
+  wazeUrl?: string;
   contacts: {
     phoneNumbers?: string[];
     email?: string[];

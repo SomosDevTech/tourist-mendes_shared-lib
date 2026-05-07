@@ -64,3 +64,26 @@ export interface ComoChegarSessionData {
   status: boolean;
 }
 
+export interface HomeSectionVisibilityItem {
+  /** Plano/assinatura (SaaS): colunas `subscriptionEnabled*` em `sections_visibility`. */
+  enabledInCms: boolean;
+  hasHighlights: boolean;
+  highlightCount: number;
+  /** Home: `enabledInCms` && escolha do tenant (`tenantVisible*`) && há conteúdo/listagem (`hasHighlights`). */
+  visible: boolean;
+}
+
+export interface HomeSectionsVisibilityData {
+  atracaoLocal: HomeSectionVisibilityItem;
+  gastronomia: HomeSectionVisibilityItem;
+  museu: HomeSectionVisibilityItem;
+  fazendaHistorica: HomeSectionVisibilityItem;
+  hospedagem: HomeSectionVisibilityItem;
+  agenteCultural: HomeSectionVisibilityItem;
+  trilha: HomeSectionVisibilityItem;
+  evento: HomeSectionVisibilityItem;
+  sobre: HomeSectionVisibilityItem;
+  nossaHistoria: HomeSectionVisibilityItem;
+  comoChegar: HomeSectionVisibilityItem;
+}
+

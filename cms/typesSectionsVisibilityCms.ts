@@ -1,0 +1,32 @@
+/** Resposta CMS para `sections_visibility` (singleton). `id` null = ainda sem linha no banco (valores virtuais todos true). */
+export interface SectionsVisibilityCmsType {
+  id: string | null;
+  subscriptionEnabledAtracaoLocal: boolean;
+  subscriptionEnabledGastronomia: boolean;
+  subscriptionEnabledMuseu: boolean;
+  subscriptionEnabledFazendaHistorica: boolean;
+  subscriptionEnabledHospedagem: boolean;
+  subscriptionEnabledAgenteCultural: boolean;
+  subscriptionEnabledTrilha: boolean;
+  subscriptionEnabledEvento: boolean;
+  subscriptionEnabledSobre: boolean;
+  subscriptionEnabledNossaHistoria: boolean;
+  subscriptionEnabledComoChegar: boolean;
+  tenantVisibleAtracaoLocal: boolean;
+  tenantVisibleGastronomia: boolean;
+  tenantVisibleMuseu: boolean;
+  tenantVisibleFazendaHistorica: boolean;
+  tenantVisibleHospedagem: boolean;
+  tenantVisibleAgenteCultural: boolean;
+  tenantVisibleTrilha: boolean;
+  tenantVisibleEvento: boolean;
+  tenantVisibleSobre: boolean;
+  tenantVisibleNossaHistoria: boolean;
+  tenantVisibleComoChegar: boolean;
+  subscriptionUpdatedById: string | null;
+  subscriptionUpdatedAt: string | null;
+  tenantVisibleUpdatedById: string | null;
+  tenantVisibleUpdatedAt: string | null;
+  createdAt: string | null;
+  updatedAt: string | null;
+}

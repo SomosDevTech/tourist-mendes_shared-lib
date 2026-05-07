@@ -29,6 +29,7 @@ export default interface FullEventoType {
   photoGallery: ImageData[];
   videos?: VideoData[];
   mapUrlLink: string;
+  wazeUrl: string;
 }
 
 export interface ResponseEventDate {

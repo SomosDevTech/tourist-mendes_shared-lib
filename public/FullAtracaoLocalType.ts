@@ -25,4 +25,5 @@ export default interface FullAtracaoLocalType {
   videos?: VideoData[];
   tour360UrlLink?: string;
   mapUrlLink: string;
+  wazeUrl: string;
 }
