@@ -11,6 +11,24 @@ export interface FiltrosAtracaoLocalCard {
   imageData: ImageData;
 }
 
+export interface FiltrosGastronomiaCard {
+  id: string;
+  title: string;
+  category: string;
+  neighborhood: string;
+  priceRange: string;
+  imageData: ImageData;
+}
+
+export interface FiltrosHospedagemCard {
+  id: string;
+  title: string;
+  category: string;
+  neighborhood: string;
+  priceRange: string;
+  imageData: ImageData;
+}
+
 export interface FiltrosAgenteCulturalCard {
   id: string;
   name: string;
