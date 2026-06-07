@@ -8,7 +8,7 @@ export interface AuditLogCmsType {
   nameOfAffectedEntity: string;
   description: string;
   registrationDateTime: Date;
-  ipAddress: number;
+  ipAddress: string;
 }
 
 export interface AuditLogCmsFiltersType {
