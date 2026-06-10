@@ -1,12 +1,14 @@
+import {
+  CircuitoTuristicoAvailabilityType,
+  CircuitoTuristicoPontoEntityType,
+} from '../common/circuitoTuristicoEnums';
 import { MapPoint } from './TourGenerator.types';
 
-export type CircuitoTuristicoAvailabilityTypePublic = 'FIXED' | 'TEMPORARY' | 'SEASONAL';
+/** @deprecated Preferir `CircuitoTuristicoAvailabilityType` de `common/circuitoTuristicoEnums`. */
+export type CircuitoTuristicoAvailabilityTypePublic = CircuitoTuristicoAvailabilityType;
 
-export type CircuitoTuristicoPontoEntityTypePublic =
-  | 'ATRACAO_LOCAL'
-  | 'TRILHA'
-  | 'EVENTO'
-  | 'AGENTE_CULTURAL';
+/** @deprecated Preferir `CircuitoTuristicoPontoEntityType` de `common/circuitoTuristicoEnums`. */
+export type CircuitoTuristicoPontoEntityTypePublic = CircuitoTuristicoPontoEntityType;
 
 export interface CircuitoTuristicoCategoryPublic {
   id: string;
@@ -18,8 +20,10 @@ export interface CircuitoTuristicoCard {
   title: string;
   slug: string;
   shortDescription: string;
-  availabilityType: CircuitoTuristicoAvailabilityTypePublic;
+  availabilityType: CircuitoTuristicoAvailabilityType;
   season?: string | null;
+  /** Indica se o circuito está dentro da janela de disponibilidade (época/datas). */
+  isCurrentlyAvailable: boolean;
   category: CircuitoTuristicoCategoryPublic;
   estimatedDurationMinutes?: number | null;
   coverImage: {
@@ -31,7 +35,7 @@ export interface CircuitoTuristicoCard {
 
 export interface CircuitoTuristicoStopPublic {
   order: number;
-  entityType: CircuitoTuristicoPontoEntityTypePublic;
+  entityType: CircuitoTuristicoPontoEntityType;
   title: string;
   slug: string;
   publicPath: string;
@@ -58,7 +62,7 @@ export interface CircuitoTuristicoPublic {
   slug: string;
   shortDescription: string;
   longDescription: string;
-  availabilityType: CircuitoTuristicoAvailabilityTypePublic;
+  availabilityType: CircuitoTuristicoAvailabilityType;
   season?: string | null;
   validFrom?: string | null;
   validTo?: string | null;

@@ -2,7 +2,13 @@ import {
   CircuitoTuristicoAvailabilityType,
   CircuitoTuristicoPontoEntityType,
   CircuitoTuristicoSeason,
-} from '@prisma/client';
+} from '../common/circuitoTuristicoEnums';
+
+export type {
+  CircuitoTuristicoAvailabilityType,
+  CircuitoTuristicoPontoEntityType,
+  CircuitoTuristicoSeason,
+};
 
 export interface CircuitoTuristicoPontoInput {
   order: number;
