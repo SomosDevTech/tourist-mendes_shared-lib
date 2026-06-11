@@ -18,9 +18,8 @@ export type CircuitoTuristicoPontoEntityType =
   | 'EVENTO'
   | 'AGENTE_CULTURAL';
 
-export type PriceRange {
-  BUDGET
-  MODERATE
-  EXPENSIVE
-  LUXURY
-}
+export type PriceRange =
+  | 'ATRACAO_LOCAL'
+  | 'TRILHA'
+  | 'EVENTO'
+  | 'AGENTE_CULTURAL';
