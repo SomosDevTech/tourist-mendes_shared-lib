@@ -17,3 +17,10 @@ export type CircuitoTuristicoPontoEntityType =
   | 'TRILHA'
   | 'EVENTO'
   | 'AGENTE_CULTURAL';
+
+export type PriceRange {
+  BUDGET
+  MODERATE
+  EXPENSIVE
+  LUXURY
+}
