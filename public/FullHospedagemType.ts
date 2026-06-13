@@ -16,6 +16,9 @@ export default interface FullHospedagemType {
 
   shortDescription: string;
 
+  /** Horário de funcionamento (legado atracaoLocal ou texto livre). */
+  workingTime?: string;
+
   priceRange: PriceRange;
 
   averageRate?: number;
