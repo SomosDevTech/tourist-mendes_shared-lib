@@ -1,4 +1,4 @@
-import { PriceRange } from '../common/priceRangeEnums';
+import { PriceRange } from '../common/circuitoTuristicoEnums';
 import { ImageData } from './generalTypes';
 
 export default interface FullGastronomiaType {

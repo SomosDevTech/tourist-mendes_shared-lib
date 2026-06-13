@@ -64,3 +64,30 @@ export type CidadeListItemType = {
   estado: string;
   uf: string;
 };
+export type TuristaCmsListItemType = {
+  id: string;
+  email: string;
+  displayName: string;
+  country: string;
+  countryName: string;
+  city: string;
+  state: string | null;
+  ibgeCityId: number | null;
+  age: number;
+  avatarUrl: string | null;
+  emailVerified: boolean;
+  tenantId: string;
+  status: boolean;
+  registrationIp: string | null;
+  oauthProvider: string | null;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type TuristaCmsListResponseType = {
+  items: TuristaCmsListItemType[];
+  total: number;
+  page: number;
+  limit: number;
+};
+

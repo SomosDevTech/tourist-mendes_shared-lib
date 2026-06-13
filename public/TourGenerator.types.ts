@@ -30,7 +30,7 @@ export interface GenerateTourRequest {
 export interface MapPoint {
   id: string;                    // ID único do ponto (geralmente o slug)
   title: string;                 // Nome do ponto
-  type: 'attraction' | 'event' | 'trail' | 'gastronomy' | 'accommodation'; // Tipo do ponto
+  type: 'attraction' | 'event' | 'trail' | 'gastronomy' | 'accommodation' | 'culturalAgent';
   slug: string;                  // Slug do ponto
   coordinates: {                 // Coordenadas geográficas
     latitude: number;
