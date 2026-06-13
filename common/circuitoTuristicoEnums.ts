@@ -17,3 +17,9 @@ export type CircuitoTuristicoPontoEntityType =
   | 'TRILHA'
   | 'EVENTO'
   | 'AGENTE_CULTURAL';
+
+export type PriceRange =
+  | 'ATRACAO_LOCAL'
+  | 'TRILHA'
+  | 'EVENTO'
+  | 'AGENTE_CULTURAL';

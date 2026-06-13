@@ -1,4 +1,4 @@
-import { PriceRange } from '@prisma/client';
+import { PriceRange } from '../common/circuitoTuristicoEnums';
 
 import { BairroType, DataType } from '../public/typesFiltrosPage';
 
