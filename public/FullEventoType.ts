@@ -7,6 +7,7 @@ export interface EventDate {
 };
 
 export default interface FullEventoType {
+  id: string;
   title: string;
   category: string;
   longDescription: string[];

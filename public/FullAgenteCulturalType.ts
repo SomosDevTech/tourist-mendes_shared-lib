@@ -1,6 +1,7 @@
 import { ImageData, VideoData } from "./generalTypes";
 
 export default interface FullAgenteCulturalType {
+  id: string;
   name: string;
   category: string;
   aboutMe: string[];
