@@ -8,6 +8,7 @@ export interface TrilhaInfo {
 }
 
 export default interface FullTrilhaType {
+  id: string;
   title: string;
   category: string;
   longDescription: string[];
