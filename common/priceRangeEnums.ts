@@ -7,3 +7,7 @@ export const PRICE_RANGE_LABELS: Record<PriceRange, string> = {
   EXPENSIVE: 'Caro',
   LUXURY: 'Luxo',
 };
+
+export const PRICE_RANGE_OPTIONS: { id: PriceRange; name: string }[] = (
+  Object.keys(PRICE_RANGE_LABELS) as PriceRange[]
+).map((id) => ({ id, name: PRICE_RANGE_LABELS[id] }));

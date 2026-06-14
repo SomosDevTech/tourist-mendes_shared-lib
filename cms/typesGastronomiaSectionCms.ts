@@ -1,4 +1,4 @@
-import { PriceRange } from '../common/circuitoTuristicoEnums';
+import { PriceRange } from '../common/priceRangeEnums';
 import { BairroType, DataType } from '../public/typesFiltrosPage';
 import { CreatedBy, RequestMediaCmsData, ResponseMediaCmsData, UpdatedBy } from './generalCmsTypes';
 
@@ -118,3 +118,5 @@ export interface FullGastronomiaCmsType {
     updatedAt: string;
   };
 }
+
+export type ResponseEditFullGastronomiaCmsType = FullGastronomiaCmsType;
