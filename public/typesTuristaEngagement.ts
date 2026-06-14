@@ -1,12 +1,12 @@
 export type TuristaPoiEntityType =
-  | "ATRACAO_LOCAL"
-  | "GASTRONOMIA"
-  | "HOSPEDAGEM"
-  | "EVENTO"
-  | "TRILHA"
-  | "MUSEU"
-  | "FAZENDA_HISTORICA"
-  | "AGENTE_CULTURAL";
+  | 'ATRACAO_LOCAL'
+  | 'GASTRONOMIA'
+  | 'HOSPEDAGEM'
+  | 'EVENTO'
+  | 'TRILHA'
+  | 'MUSEU'
+  | 'FAZENDA_HISTORICA'
+  | 'AGENTE_CULTURAL';
 
 export type TuristaFavoritoItemType = {
   id: string;
@@ -100,6 +100,7 @@ export type TuristaReviewListType = {
   page: number;
   limit: number;
 };
+<<<<<<< HEAD
 
 export const TURISTA_POI_ENTITY_LABELS: Record<TuristaPoiEntityType, string> = {
   ATRACAO_LOCAL: "Atração local",
@@ -111,3 +112,5 @@ export const TURISTA_POI_ENTITY_LABELS: Record<TuristaPoiEntityType, string> = {
   FAZENDA_HISTORICA: "Fazenda histórica",
   AGENTE_CULTURAL: "Agente cultural",
 };
+=======
+>>>>>>> 2c7457cf888bfd9d23cf5a913b2715d892e616e8
