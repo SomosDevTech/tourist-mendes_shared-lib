@@ -58,6 +58,12 @@ export type PaisListItemType = {
   nameEn: string;
 };
 
+export type CidadeListItemType = {
+  id: number;
+  nome: string;
+  estado: string;
+  uf: string;
+};
 export type TuristaCmsListItemType = {
   id: string;
   email: string;
