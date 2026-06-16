@@ -35,5 +35,6 @@ export default interface FullHospedagemType {
   };
   coverImage: ImageData;
   photoGallery: ImageData[];
+  mapUrlLink: string;
   wazeUrl: string;
 }
