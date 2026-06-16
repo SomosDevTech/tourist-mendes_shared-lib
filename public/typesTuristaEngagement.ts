@@ -100,14 +100,3 @@ export type TuristaReviewListType = {
   page: number;
   limit: number;
 };
-
-export const TURISTA_POI_ENTITY_LABELS: Record<TuristaPoiEntityType, string> = {
-  ATRACAO_LOCAL: "Atração local",
-  GASTRONOMIA: "Gastronomia",
-  HOSPEDAGEM: "Hospedagem",
-  EVENTO: "Evento",
-  TRILHA: "Trilha",
-  MUSEU: "Museu",
-  FAZENDA_HISTORICA: "Fazenda histórica",
-  AGENTE_CULTURAL: "Agente cultural",
-};
