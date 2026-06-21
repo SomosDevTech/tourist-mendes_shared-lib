@@ -66,8 +66,11 @@ export interface CircuitoTuristicoCmsListItem {
 }
 
 export interface CircuitoTuristicoCmsMapFields {
+  /** Paradas resolvidas para modal do mapa (Waze e link da página por ponto). */
+  stops: CircuitoTuristicoStopPublic[];
   mapData: CircuitoTuristicoMapDataPublic;
   gpxUrl?: string;
+  /** Atalho opcional: Waze até a 1ª parada (botão “Iniciar roteiro”). */
   wazeUrlFirstStop?: string;
   mapPointCount: number;
 }

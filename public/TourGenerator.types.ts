@@ -36,6 +36,12 @@ export interface MapPoint {
     latitude: number;
     longitude: number;
   };
+  /** Caminho relativo no site público (ex.: /atracaoLocal/meu-slug). */
+  publicPath?: string;
+  /** Descrição curta para modal do mapa. */
+  shortDescription?: string;
+  /** Link Waze para navegação até o ponto (mobile/tablet). */
+  wazeUrl?: string;
 }
 
 /**
