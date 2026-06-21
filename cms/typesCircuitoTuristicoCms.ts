@@ -3,6 +3,10 @@ import {
   CircuitoTuristicoPontoEntityType,
   CircuitoTuristicoSeason,
 } from '../common/circuitoTuristicoEnums';
+import {
+  CircuitoTuristicoMapDataPublic,
+  CircuitoTuristicoStopPublic,
+} from '../public/typesCircuitoTuristico';
 
 export type {
   CircuitoTuristicoAvailabilityType,
@@ -61,7 +65,14 @@ export interface CircuitoTuristicoCmsListItem {
   updatedAt: string;
 }
 
-export interface CircuitoTuristicoCmsDetail extends CircuitoTuristicoCmsListItem {
+export interface CircuitoTuristicoCmsMapFields {
+  mapData: CircuitoTuristicoMapDataPublic;
+  gpxUrl?: string;
+  wazeUrlFirstStop?: string;
+  mapPointCount: number;
+}
+
+export interface CircuitoTuristicoCmsDetail extends CircuitoTuristicoCmsListItem, CircuitoTuristicoCmsMapFields {
   shortDescription: string;
   longDescription: string;
   seasonStartMonth?: number | null;
@@ -70,6 +81,16 @@ export interface CircuitoTuristicoCmsDetail extends CircuitoTuristicoCmsListItem
   validTo?: string | null;
   estimatedDurationMinutes?: number | null;
   coverImage: { id: string; url: string; altDescription: string };
+}
+
+export interface CircuitoTuristicoCmsMapaPreview {
+  id: string;
+  title: string;
+  stops: CircuitoTuristicoStopPublic[];
+  mapData: CircuitoTuristicoMapDataPublic;
+  gpxUrl?: string;
+  wazeUrlFirstStop?: string;
+  mapPointCount: number;
 }
 
 export interface CircuitoTuristicoEntityPickerItem {
