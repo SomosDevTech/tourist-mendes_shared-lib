@@ -45,6 +45,7 @@ export interface MapaTempoRealConfigData {
   avatarPresets: MapaTempoRealAvatarPreset[];
 }
 
+/** POI leve — `GET /api/app/mapa/pois` (Etapa 8 Parte B). */
 export interface MapaTempoRealPoiItem {
   entityType: string;
   entityId: string;
@@ -86,6 +87,7 @@ export interface MapaTempoRealPoisData {
   circuitos: MapaTempoRealCircuitoMapItem[];
 }
 
+/** Detalhe expandido — `GET /api/app/mapa/pois/:entityType/:entityId`. */
 export interface MapaTempoRealPoiDetailData extends MapaTempoRealPoiItem {
   category?: string;
   longDescription?: string;
