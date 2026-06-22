@@ -1,4 +1,4 @@
-/** Contrato público — `GET /api/app/mapa/config` (Etapa 8 Parte A). */
+/** Contrato público — `GET /api/app/mapa/config` (Etapa 8). */
 
 export type MapaTempoRealContextType = 'CITY';
 
@@ -26,7 +26,6 @@ export interface MapaTempoRealAvatarPreset {
   imageUrl: string;
 }
 
-/** Camadas de POI — Parte B consome `enabled`; Parte A já expõe para o front montar UI. */
 export interface MapaTempoRealLayerOption {
   id: string;
   label: string;
@@ -44,4 +43,51 @@ export interface MapaTempoRealConfigData {
   tileLayer: MapaTempoRealTileLayer;
   layersAvailable: MapaTempoRealLayerOption[];
   avatarPresets: MapaTempoRealAvatarPreset[];
+}
+
+export interface MapaTempoRealPoiItem {
+  entityType: string;
+  entityId: string;
+  layerId: string;
+  title: string;
+  slug: string;
+  lat: number;
+  lng: number;
+  shortDescription?: string;
+  coverImageUrl?: string;
+  publicPath: string;
+  averageRating?: number | null;
+  reviewCount?: number;
+}
+
+export interface MapaTempoRealCircuitoRoutePoint {
+  order: number;
+  lat: number;
+  lng: number;
+  title: string;
+  entityType: string;
+  publicPath: string;
+}
+
+export interface MapaTempoRealCircuitoMapItem {
+  id: string;
+  layerId: 'circuitoTuristico';
+  title: string;
+  slug: string;
+  publicPath: string;
+  shortDescription: string;
+  coverImageUrl?: string;
+  routePoints: MapaTempoRealCircuitoRoutePoint[];
+  gpxUrl?: string;
+}
+
+export interface MapaTempoRealPoisData {
+  pois: MapaTempoRealPoiItem[];
+  circuitos: MapaTempoRealCircuitoMapItem[];
+}
+
+export interface MapaTempoRealPoiDetailData extends MapaTempoRealPoiItem {
+  category?: string;
+  longDescription?: string;
+  wazeUrl?: string;
 }
