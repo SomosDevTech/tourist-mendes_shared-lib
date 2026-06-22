@@ -86,6 +86,7 @@ export interface HomeSectionsVisibilityData {
   nossaHistoria: HomeSectionVisibilityItem;
   comoChegar: HomeSectionVisibilityItem;
   mapaInterativo: HomeSectionVisibilityItem;
+  mapaTempoReal: HomeSectionVisibilityItem;
   roteiro: HomeSectionVisibilityItem;
 }
 
