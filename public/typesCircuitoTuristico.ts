@@ -36,6 +36,7 @@ export interface CircuitoTuristicoCard {
 export interface CircuitoTuristicoStopPublic {
   order: number;
   entityType: CircuitoTuristicoPontoEntityType;
+  entityId: string;
   title: string;
   slug: string;
   publicPath: string;

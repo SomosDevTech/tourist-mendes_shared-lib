@@ -9,6 +9,8 @@ export interface FiltrosAtracaoLocalCard {
   category: string;
   neighborhood: string;
   imageData: ImageData;
+  avgRating?: number | null;
+  reviewCount?: number;
 }
 
 export interface FiltrosGastronomiaCard {
@@ -18,6 +20,8 @@ export interface FiltrosGastronomiaCard {
   neighborhood: string;
   priceRange: string;
   imageData: ImageData;
+  avgRating?: number | null;
+  reviewCount?: number;
 }
 
 export interface FiltrosHospedagemCard {
@@ -27,6 +31,8 @@ export interface FiltrosHospedagemCard {
   neighborhood: string;
   priceRange: string;
   imageData: ImageData;
+  avgRating?: number | null;
+  reviewCount?: number;
 }
 
 export interface FiltrosAgenteCulturalCard {
@@ -34,6 +40,8 @@ export interface FiltrosAgenteCulturalCard {
   name: string;
   category: string;
   imageData: ImageData;
+  avgRating?: number | null;
+  reviewCount?: number;
 }
 
 export interface TrailInfos {
@@ -46,6 +54,8 @@ export interface FiltrosTrilhaCard {
   title: string;
   trailInfos: TrailInfos;
   imageData: ImageData;
+  avgRating?: number | null;
+  reviewCount?: number;
 }
 
 export interface FiltrosEventoCard {
@@ -55,6 +65,8 @@ export interface FiltrosEventoCard {
   neighborhood: string;
   schedule: EventDate[];
   imageData: ImageData;
+  avgRating?: number | null;
+  reviewCount?: number;
 }
 
 /*Filters Types*/

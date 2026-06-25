@@ -40,6 +40,9 @@ export interface MapaTempoRealConfigData {
   defaultZoom: number;
   perimeterGeoJsonUrl: string;
   proximityAlertRadiusMeters: number;
+  geofenceEnterRadiusMeters: number;
+  minDwellSeconds: number;
+  exitHysteresisSeconds: number;
   tileLayer: MapaTempoRealTileLayer;
   layersAvailable: MapaTempoRealLayerOption[];
   avatarPresets: MapaTempoRealAvatarPreset[];
@@ -67,6 +70,7 @@ export interface MapaTempoRealCircuitoRoutePoint {
   lng: number;
   title: string;
   entityType: string;
+  entityId: string;
   publicPath: string;
 }
 
@@ -91,5 +95,6 @@ export interface MapaTempoRealPoisData {
 export interface MapaTempoRealPoiDetailData extends MapaTempoRealPoiItem {
   category?: string;
   longDescription?: string;
+  workingTime?: string;
   wazeUrl?: string;
 }
