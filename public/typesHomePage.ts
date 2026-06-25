@@ -11,6 +11,8 @@ export interface AtracaoLocalHomeCard {
   title: string;
   shortDescription: string;
   imageData: ImageData;
+  avgRating?: number | null;
+  reviewCount?: number;
 }
 
 export interface AgenteCulturalHomeCard {
@@ -18,6 +20,8 @@ export interface AgenteCulturalHomeCard {
   name: string;
   shortDescription: string;
   imageData: ImageData;
+  avgRating?: number | null;
+  reviewCount?: number;
 }
 
 
@@ -28,6 +32,8 @@ export interface TrilhasHomeCard {
   level: string;
   shortDescription: string;
   imageData: ImageData;
+  avgRating?: number | null;
+  reviewCount?: number;
 }
 
 export interface EventHomeCard {
@@ -35,6 +41,8 @@ export interface EventHomeCard {
   eventTitle: string;
   shortDescription: string;
   imageData: ImageData;
+  avgRating?: number | null;
+  reviewCount?: number;
 }
 
 export interface AboutSessionData {
