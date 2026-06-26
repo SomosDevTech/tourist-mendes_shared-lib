@@ -85,3 +85,19 @@ export interface CircuitoTuristicoListResponse {
   page: number;
   limit: number;
 }
+
+/** Query params aceitos em `GET /api/circuitoTuristico`. */
+export interface CircuitoTuristicoListFilters {
+  titulo?: string;
+  categoriaId?: string;
+  /** Referência de sazonalidade (`dd-mm-yyyy`). Sem param = hoje. */
+  data?: string;
+  /** Ordenação por título (`titleSort`). Default: `asc`. */
+  orderby?: 'asc' | 'desc';
+  /** Ordenação por ordem de exibição CMS. Default: `asc`. */
+  orderbyDisplayOrder?: 'asc' | 'desc';
+  /** Quando `true`, inclui circuitos fora da época com `isCurrentlyAvailable: false`. */
+  incluirIndisponiveis?: boolean;
+  pagina?: number;
+  limit?: number;
+}
