@@ -130,6 +130,8 @@ export interface ResponseEditFullAtracaoLocalCmsType {
     number: string;
     complement: string;
     zipCode: string;
+    latitude?: number;
+    longitude?: number;
   };
   neighborhood: {
     id: string;
@@ -140,6 +142,11 @@ export interface ResponseEditFullAtracaoLocalCmsType {
   videos?: ResponseMediaCmsData[];
   tour360UrlLink?: string;
   tour360Id?: string;
+  visitAreaType?: 'POINT' | 'LARGE_AREA' | 'PERIMETER';
+  proximityRadiusMeters?: number | null;
+  geofenceRadiusMeters?: number | null;
+  visitGeometry?: object | null;
+  visitPerimeterConfigured?: boolean;
   registeredById: string;
   registrationDate: string;
   updatedById?: string;

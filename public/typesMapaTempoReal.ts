@@ -69,6 +69,7 @@ export interface MapaTempoRealPoiItem {
   publicPath: string;
   averageRating?: number | null;
   reviewCount?: number;
+  /** Etapa 8.10 — apenas atrações locais (demais POIs usam config global). */
   visitAreaType?: MapaTempoRealVisitAreaType;
   proximityRadiusMeters?: number | null;
   geofenceRadiusMeters?: number | null;
