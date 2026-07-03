@@ -49,6 +49,13 @@ export interface MapaTempoRealConfigData {
 }
 
 /** POI leve — `GET /api/app/mapa/pois` (Etapa 8 Parte B). */
+export type MapaTempoRealVisitAreaType = 'POINT' | 'LARGE_AREA' | 'PERIMETER';
+
+export interface VisitGeometryPolygon {
+  type: 'Polygon';
+  coordinates: number[][][];
+}
+
 export interface MapaTempoRealPoiItem {
   entityType: string;
   entityId: string;
@@ -62,6 +69,10 @@ export interface MapaTempoRealPoiItem {
   publicPath: string;
   averageRating?: number | null;
   reviewCount?: number;
+  visitAreaType?: MapaTempoRealVisitAreaType;
+  proximityRadiusMeters?: number | null;
+  geofenceRadiusMeters?: number | null;
+  visitGeometry?: VisitGeometryPolygon | null;
 }
 
 export interface MapaTempoRealCircuitoRoutePoint {
