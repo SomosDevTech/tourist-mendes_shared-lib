@@ -69,17 +69,11 @@ export interface MapaTempoRealPoiItem {
   publicPath: string;
   averageRating?: number | null;
   reviewCount?: number;
-<<<<<<< HEAD
-  visitAreaType?: MapaTempoRealVisitAreaType;
-  proximityRadiusMeters?: number | null;
-  geofenceRadiusMeters?: number | null;
-=======
   /** Etapa 8.10 — apenas atrações locais (demais POIs usam config global). */
   visitAreaType?: MapaTempoRealVisitAreaType;
   proximityRadiusMeters?: number | null;
   geofenceRadiusMeters?: number | null;
   visitGeometry?: VisitGeometryPolygon | null;
->>>>>>> a8c22b21001ae9d216e45e82f4b0063b5c54b266
 }
 
 export interface MapaTempoRealCircuitoRoutePoint {
