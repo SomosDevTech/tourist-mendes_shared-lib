@@ -61,6 +61,8 @@ export interface CircuitoTuristicoCmsListItem {
   stopCount: number;
   pontos: CircuitoTuristicoCmsPontoSummary[];
   displayOrder: number;
+  linkUrl?: string;
+  qrCodeImage?: string;
   registrationDate: string;
   updatedAt: string;
 }
