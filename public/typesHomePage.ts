@@ -96,5 +96,6 @@ export interface HomeSectionsVisibilityData {
   mapaInterativo: HomeSectionVisibilityItem;
   mapaTempoReal: HomeSectionVisibilityItem;
   roteiro: HomeSectionVisibilityItem;
+  circuitoTuristico: HomeSectionVisibilityItem;
 }
 
