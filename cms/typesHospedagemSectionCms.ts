@@ -92,6 +92,8 @@ export interface FullHospedagemCmsType {
   checkInTime?: string;
   checkOutTime?: string;
   bookingUrl?: string;
+  linkUrl?: string;
+  qrCodeImage?: string;
   contacts: {
     phone1?: string;
     phone2?: string;
