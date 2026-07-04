@@ -15,6 +15,7 @@ export interface SectionsVisibilityCmsType {
   subscriptionEnabledMapaInterativo: boolean;
   subscriptionEnabledMapaTempoReal: boolean;
   subscriptionEnabledRoteiro: boolean;
+  subscriptionEnabledCircuitoTuristico: boolean;
   tenantVisibleAtracaoLocal: boolean;
   tenantVisibleGastronomia: boolean;
   tenantVisibleMuseu: boolean;
@@ -29,6 +30,7 @@ export interface SectionsVisibilityCmsType {
   tenantVisibleMapaInterativo: boolean;
   tenantVisibleMapaTempoReal: boolean;
   tenantVisibleRoteiro: boolean;
+  tenantVisibleCircuitoTuristico: boolean;
   subscriptionUpdatedById: string | null;
   subscriptionUpdatedAt: string | null;
   tenantVisibleUpdatedById: string | null;
