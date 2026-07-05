@@ -31,6 +31,7 @@ export interface SectionsVisibilityCmsType {
   tenantVisibleMapaTempoReal: boolean;
   tenantVisibleRoteiro: boolean;
   tenantVisibleCircuitoTuristico: boolean;
+  roteiroIaIncludeGastronomia: boolean;
   subscriptionUpdatedById: string | null;
   subscriptionUpdatedAt: string | null;
   tenantVisibleUpdatedById: string | null;
