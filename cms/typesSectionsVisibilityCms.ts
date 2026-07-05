@@ -32,10 +32,20 @@ export interface SectionsVisibilityCmsType {
   tenantVisibleRoteiro: boolean;
   tenantVisibleCircuitoTuristico: boolean;
   roteiroIaIncludeGastronomia: boolean;
+  cmsMenuVisibleAtracaoLocal: boolean;
+  cmsMenuVisibleEvento: boolean;
+  cmsMenuVisibleGastronomia: boolean;
+  cmsMenuVisibleHospedagem: boolean;
+  cmsMenuVisibleTrilha: boolean;
+  cmsMenuVisibleAgenteCultural: boolean;
+  cmsMenuVisibleCircuitoTuristico: boolean;
+  cmsMenuVisibleNossaHistoria: boolean;
   subscriptionUpdatedById: string | null;
   subscriptionUpdatedAt: string | null;
   tenantVisibleUpdatedById: string | null;
   tenantVisibleUpdatedAt: string | null;
+  cmsMenuUpdatedById: string | null;
+  cmsMenuUpdatedAt: string | null;
   createdAt: string | null;
   updatedAt: string | null;
 }
