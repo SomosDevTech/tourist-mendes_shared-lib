@@ -2,7 +2,11 @@
 
 export type MapaTempoRealContextType = 'CITY';
 
-export type MapaTempoRealAvatarPresetId = 'BOY' | 'GIRL';
+export type MapaTempoRealAvatarPresetId =
+  | 'ADVENTURER'
+  | 'ADVENTURER2'
+  | 'FARMER'
+  | 'FARMER2';
 
 export interface MapaTempoRealLatLng {
   lat: number;
@@ -23,7 +27,9 @@ export interface MapaTempoRealTileLayer {
 export interface MapaTempoRealAvatarPreset {
   id: MapaTempoRealAvatarPresetId;
   label: string;
-  imageUrl: string;
+  spritesheetUrl: string;
+  previewUrl: string;
+  imageUrl?: string;
 }
 
 export interface MapaTempoRealLayerOption {
