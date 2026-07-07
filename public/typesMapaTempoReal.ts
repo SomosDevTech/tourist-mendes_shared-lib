@@ -60,8 +60,11 @@ export interface MapaTempoRealConfigData {
   geofenceEnterRadiusMeters: number;
   minDwellSeconds: number;
   exitHysteresisSeconds: number;
-  defaultTileLayerId?: MapaTempoRealTileLayerId;
-  tileLayerOptions?: MapaTempoRealTileLayerOption[];
+  /** Preset padrão do fundo (LIGHT = CARTO light_all). */
+  defaultTileLayerId: MapaTempoRealTileLayerId;
+  /** Opções que o usuário pode escolher no mapa (sem NAVIGATION). */
+  tileLayerOptions: MapaTempoRealTileLayerOption[];
+  /** @deprecated Preferir defaultTileLayerId + tileLayerOptions — mantido para clientes antigos. */
   tileLayer: MapaTempoRealTileLayer;
   layersAvailable: MapaTempoRealLayerOption[];
   avatarPresets: MapaTempoRealAvatarPreset[];
