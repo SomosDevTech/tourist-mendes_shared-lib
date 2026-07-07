@@ -10,6 +10,9 @@ export type TuristaProfileType = {
   age: number;
   birthDate: string;
   avatarUrl: string | null;
+  gender: import('./turistaGender').TuristaGender;
+  avatarPresetId: import('./typesMapaTempoReal').MapaTempoRealAvatarPresetId;
+  avatarConfig: import('./typesTuristaAvatar').TuristaAvatarConfig | null;
   emailVerified: boolean;
   createdAt: string;
 };
@@ -30,6 +33,7 @@ export type TuristaRegisterInput = {
   confirmPassword: string;
   displayName: string;
   birthDate: string;
+  gender: import('./turistaGender').TuristaGender;
   country: string;
   city: string;
   state?: string | null;
@@ -46,6 +50,7 @@ export type TuristaLoginInput = {
 export type TuristaUpdateProfileInput = {
   displayName?: string;
   avatarUrl?: string | null;
+  gender?: import('./turistaGender').TuristaGender;
   country?: string;
   city?: string;
   state?: string | null;
@@ -74,6 +79,8 @@ export type TuristaCmsListItemType = {
   state: string | null;
   ibgeCityId: number | null;
   age: number;
+  gender: import('./turistaGender').TuristaGender;
+  avatarPresetId: import('./typesMapaTempoReal').MapaTempoRealAvatarPresetId;
   avatarUrl: string | null;
   emailVerified: boolean;
   tenantId: string;

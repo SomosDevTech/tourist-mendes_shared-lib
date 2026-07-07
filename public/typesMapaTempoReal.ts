@@ -2,7 +2,11 @@
 
 export type MapaTempoRealContextType = 'CITY';
 
-export type MapaTempoRealAvatarPresetId = 'BOY' | 'GIRL';
+export type MapaTempoRealAvatarPresetId =
+  | 'ADVENTURER'
+  | 'ADVENTURER2'
+  | 'FARMER'
+  | 'FARMER2';
 
 export interface MapaTempoRealLatLng {
   lat: number;
@@ -20,10 +24,23 @@ export interface MapaTempoRealTileLayer {
   maxZoom: number;
 }
 
+/** LIGHT/VOYAGER = escolha do usuário · NAVIGATION = futuro modo rota OSRM */
+export type MapaTempoRealTileLayerId = 'LIGHT' | 'VOYAGER' | 'NAVIGATION';
+
+export interface MapaTempoRealTileLayerOption {
+  id: Exclude<MapaTempoRealTileLayerId, 'NAVIGATION'>;
+  label: string;
+  description: string;
+  tileLayer: MapaTempoRealTileLayer;
+}
+
 export interface MapaTempoRealAvatarPreset {
   id: MapaTempoRealAvatarPresetId;
   label: string;
-  imageUrl: string;
+  spritesheetUrl: string;
+  previewUrl: string;
+  /** Legado SVG (Etapa 8) — não usar em novos clientes. */
+  imageUrl?: string;
 }
 
 export interface MapaTempoRealLayerOption {
@@ -43,6 +60,11 @@ export interface MapaTempoRealConfigData {
   geofenceEnterRadiusMeters: number;
   minDwellSeconds: number;
   exitHysteresisSeconds: number;
+  /** Preset padrão do fundo (LIGHT = CARTO light_all). */
+  defaultTileLayerId: MapaTempoRealTileLayerId;
+  /** Opções que o usuário pode escolher no mapa (sem NAVIGATION). */
+  tileLayerOptions: MapaTempoRealTileLayerOption[];
+  /** @deprecated Preferir defaultTileLayerId + tileLayerOptions — mantido para clientes antigos. */
   tileLayer: MapaTempoRealTileLayer;
   layersAvailable: MapaTempoRealLayerOption[];
   avatarPresets: MapaTempoRealAvatarPreset[];
