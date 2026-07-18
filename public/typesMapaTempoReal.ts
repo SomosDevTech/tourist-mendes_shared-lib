@@ -114,6 +114,10 @@ export interface MapaTempoRealCircuitoMapItem {
   title: string;
   slug: string;
   publicPath: string;
+  /** URL canônica da página pública (`/circuitoTuristico/{uuid}`) — QR / compartilhar. */
+  linkUrl: string;
+  /** Imagem PNG do QR (URL no storage). */
+  qrCodeImage: string;
   shortDescription: string;
   coverImageUrl?: string;
   routePoints: MapaTempoRealCircuitoRoutePoint[];
