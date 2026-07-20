@@ -67,6 +67,32 @@ export type PresencePositionDto = {
   avatarPresetId?: string;
 };
 
+export type TuristaGroupMapMarkerDto = {
+  id: string;
+  groupId: string;
+  lat: number;
+  lng: number;
+  label: string;
+  iconKey: string | null;
+  expiresAt: string | null;
+  createdAt: string;
+  createdByTuristaId: string;
+  createdByDisplayName: string;
+};
+
+export type TuristaGroupMeetingPointDto = {
+  id: string;
+  groupId: string;
+  lat: number;
+  lng: number;
+  label: string;
+  scheduledAt: string | null;
+  expiresAt: string | null;
+  createdAt: string;
+  createdByTuristaId: string;
+  createdByDisplayName: string;
+};
+
 export const TURISTA_GROUP_ROLE_LABELS: Record<TuristaGroupMemberRoleDto, string> = {
   OWNER: "Dono",
   ADMIN: "Admin",
