@@ -6,6 +6,7 @@ export type TuristaGroupInviteStatusDto = "PENDING" | "ACCEPTED" | "REJECTED" | 
 export type TuristaGroupMemberDto = {
   turistaId: string;
   displayName: string;
+  avatarPresetId?: string;
   role: TuristaGroupMemberRoleDto;
   isBackupOwner: boolean;
   mapPresenceOn: boolean;
@@ -63,6 +64,33 @@ export type PresencePositionDto = {
   heading?: number | null;
   updatedAt: string;
   displayName?: string;
+  avatarPresetId?: string;
+};
+
+export type TuristaGroupMapMarkerDto = {
+  id: string;
+  groupId: string;
+  lat: number;
+  lng: number;
+  label: string;
+  iconKey: string | null;
+  expiresAt: string | null;
+  createdAt: string;
+  createdByTuristaId: string;
+  createdByDisplayName: string;
+};
+
+export type TuristaGroupMeetingPointDto = {
+  id: string;
+  groupId: string;
+  lat: number;
+  lng: number;
+  label: string;
+  scheduledAt: string | null;
+  expiresAt: string | null;
+  createdAt: string;
+  createdByTuristaId: string;
+  createdByDisplayName: string;
 };
 
 export const TURISTA_GROUP_ROLE_LABELS: Record<TuristaGroupMemberRoleDto, string> = {
