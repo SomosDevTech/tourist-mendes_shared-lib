@@ -93,6 +93,86 @@ export type TuristaGroupMeetingPointDto = {
   createdByDisplayName: string;
 };
 
+export type TuristaGroupIntentionStatusDto = "ACTIVE" | "ENDED";
+export type TuristaGroupIntentionTargetTypeDto =
+  | "FREE"
+  | "POI"
+  | "MARKER"
+  | "MEETING"
+  | "COORDS";
+
+export type TuristaGroupIntentionDto = {
+  id: string;
+  groupId: string;
+  turistaId: string;
+  displayName: string;
+  body: string;
+  targetType: TuristaGroupIntentionTargetTypeDto;
+  targetId: string | null;
+  lat: number | null;
+  lng: number | null;
+  label: string | null;
+  status: TuristaGroupIntentionStatusDto;
+  endedAt: string | null;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type GroupAlertAttentionDto = {
+  groupId: string;
+  fromTuristaId: string;
+  displayName: string;
+  expiresAt: string;
+};
+
+export type GroupPokeDto = {
+  groupId: string;
+  fromTuristaId: string;
+  displayName: string;
+  targetTuristaId: string;
+};
+
+export type TuristaGroupActivityInviteTargetTypeDto = "POI" | "MARKER" | "COORDS";
+export type TuristaGroupActivityInviteeStatusDto = "PENDING" | "ACCEPTED" | "REJECTED";
+
+export type TuristaGroupActivityInviteeDto = {
+  turistaId: string;
+  displayName: string;
+  status: TuristaGroupActivityInviteeStatusDto;
+  respondedAt: string | null;
+};
+
+export type TuristaGroupActivityInviteDto = {
+  id: string;
+  groupId: string;
+  createdById: string;
+  createdByDisplayName: string;
+  targetType: TuristaGroupActivityInviteTargetTypeDto;
+  targetId: string | null;
+  lat: number | null;
+  lng: number | null;
+  label: string;
+  note: string | null;
+  scheduledAt: string | null;
+  markerId: string | null;
+  createdAt: string;
+  expiresAt: string | null;
+  myStatus: TuristaGroupActivityInviteeStatusDto | null;
+  invitees: TuristaGroupActivityInviteeDto[];
+};
+
+export type TuristaGroupAnnouncementDto = {
+  id: string;
+  groupId: string;
+  createdById: string;
+  createdByDisplayName: string;
+  title: string | null;
+  body: string;
+  pinned: boolean;
+  createdAt: string;
+  read: boolean;
+};
+
 export const TURISTA_GROUP_ROLE_LABELS: Record<TuristaGroupMemberRoleDto, string> = {
   OWNER: "Dono",
   ADMIN: "Admin",
