@@ -22,9 +22,11 @@ export type TuristaRegisterPendingType = {
   emailVerificationSent: true;
 };
 
+/** Sessão turista. `turistaAccessToken` omitido no JSON (SEC#20 — cookie HttpOnly). */
 export type TuristaAuthResponseType = {
   turista: TuristaProfileType;
-  /** @deprecated Cookie HttpOnly (SEC#20); opcional só para clientes legados. */
+
+  /** @deprecated Preferir cookie HttpOnly; mantido opcional só para clientes legados. */
   turistaAccessToken?: string;
 };
 
