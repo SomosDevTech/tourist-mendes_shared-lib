@@ -23,8 +23,9 @@ export type TuristaRegisterPendingType = {
 };
 
 export type TuristaAuthResponseType = {
-  turistaAccessToken: string;
   turista: TuristaProfileType;
+  /** @deprecated Cookie HttpOnly (SEC#20); opcional só para clientes legados. */
+  turistaAccessToken?: string;
 };
 
 export type TuristaRegisterInput = {
