@@ -49,9 +49,14 @@ export type TuristaFavoritoStatusType = {
   favorited: boolean;
 };
 
+export type TuristaActionSurface = 'WEB' | 'APP' | 'PWA';
+export type TuristaActionMoment = 'MAPA' | 'DEPOIS';
+
 export type TuristaFavoritoInput = {
   entityType: TuristaPoiEntityType;
   entityId: string;
+  surface?: TuristaActionSurface;
+  moment?: TuristaActionMoment;
 };
 
 export type EntityReviewType = {
@@ -86,6 +91,8 @@ export type EntityReviewInput = {
   entityId: string;
   rating: number;
   comment?: string | null;
+  surface?: TuristaActionSurface;
+  moment?: TuristaActionMoment;
 };
 
 export type EntityReviewMineType = EntityReviewType | null;

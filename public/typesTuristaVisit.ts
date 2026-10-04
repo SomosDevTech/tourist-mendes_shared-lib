@@ -25,6 +25,8 @@ export interface TuristaVisitEnterInput {
   circuitId?: string | null;
   circuitStopIndex?: number | null;
   detailViewedAt?: string | null;
+  surface?: 'WEB' | 'APP' | 'PWA';
+  moment?: 'MAPA' | 'DEPOIS';
 }
 
 export interface TuristaVisitExitInput {
