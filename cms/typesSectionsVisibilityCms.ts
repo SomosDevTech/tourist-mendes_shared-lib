@@ -1,4 +1,4 @@
-/** Resposta CMS para `sections_visibility` (singleton). `id` null = ainda sem linha no banco (valores virtuais todos true). */
+/** Resposta CMS para `sections_visibility` (1 linha por tenant via ALS). `id` null = ainda sem linha no banco (valores virtuais todos true). */
 export interface SectionsVisibilityCmsType {
   id: string | null;
   subscriptionEnabledAtracaoLocal: boolean;

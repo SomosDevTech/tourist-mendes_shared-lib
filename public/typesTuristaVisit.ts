@@ -53,3 +53,27 @@ export interface TuristaMapaJourneyData {
   recentVisits: TuristaVisitData[];
   circuitProgress: TuristaCircuitProgressData[];
 }
+
+export type TuristaVisitHistoryItemType = {
+  id: string;
+  entityType: TuristaPoiEntityType;
+  entityId: string;
+  title: string;
+  slug: string;
+  category?: string;
+  coverImageUrl?: string;
+  publicPath: string;
+  enteredAt: string;
+  exitedAt: string | null;
+  dwellMinutes: number | null;
+  visitNumber: number;
+  reviewId: string | null;
+  rating: number | null;
+};
+
+export type TuristaVisitHistoryListType = {
+  items: TuristaVisitHistoryItemType[];
+  total: number;
+  page: number;
+  limit: number;
+};
