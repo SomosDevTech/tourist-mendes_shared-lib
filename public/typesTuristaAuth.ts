@@ -22,9 +22,11 @@ export type TuristaRegisterPendingType = {
   emailVerificationSent: true;
 };
 
+/** Sessão turista. A web usa cookie HttpOnly (SEC#20). O app usa `accessToken` + `refreshToken` no JSON. */
 export type TuristaAuthResponseType = {
-  turistaAccessToken: string;
   turista: TuristaProfileType;
+  accessToken: string;
+  refreshToken: string;
 };
 
 export type TuristaRegisterInput = {
