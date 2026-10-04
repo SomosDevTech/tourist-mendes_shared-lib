@@ -24,7 +24,7 @@ export type CentroTuristicoAtracaoData = {
 export type CentroTuristicoData = {
   id: string;
   name: string;
-  category: "TURISTICO" | "HISTORICO" | "CULTURAL" | "ARQUEOLOGICO";
+  category: 'TURISTICO' | 'HISTORICO' | 'CULTURAL' | 'ARQUEOLOGICO';
   latitude: number;
   longitude: number;
   /** Anel externo [lng, lat]. Estar dentro é ter entrado no centro. */
