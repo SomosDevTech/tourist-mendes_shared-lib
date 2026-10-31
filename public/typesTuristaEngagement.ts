@@ -59,6 +59,13 @@ export type TuristaFavoritoInput = {
   moment?: TuristaActionMoment;
 };
 
+/** MOD.1 — situação do comentário; só vem para quem escreveu. */
+export type ReviewCommentFeedback = {
+  commentStatus?: 'PUBLICADO' | 'EM_ANALISE' | 'NAO_PUBLICADO';
+  commentNotice?: string;
+  canAppeal?: boolean;
+};
+
 export type EntityReviewType = {
   id: string;
   entityType: TuristaPoiEntityType;
@@ -69,7 +76,7 @@ export type EntityReviewType = {
   createdAt: string;
   updatedAt: string;
   isOwn: boolean;
-};
+} & ReviewCommentFeedback;
 
 export type EntityReviewSummaryType = {
   entityType: TuristaPoiEntityType;
@@ -110,7 +117,7 @@ export type TuristaReviewListItemType = {
   category?: string;
   coverImageUrl?: string;
   publicPath: string;
-};
+} & ReviewCommentFeedback;
 
 export type TuristaReviewListType = {
   items: TuristaReviewListItemType[];
