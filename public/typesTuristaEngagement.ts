@@ -59,9 +59,11 @@ export type TuristaFavoritoInput = {
   moment?: TuristaActionMoment;
 };
 
-/** MOD.1 — situação do comentário; só vem para quem escreveu. */
+/** MOD.UX — situação do comentário; só vem para quem escreveu. */
 export type ReviewCommentFeedback = {
   commentStatus?: 'PUBLICADO' | 'EM_ANALISE' | 'NAO_PUBLICADO';
+  /** LINGUAGEM = UI vermelha; POLITICA = outra regra (ex.: link). */
+  commentBlockKind?: 'LINGUAGEM' | 'POLITICA';
   commentNotice?: string;
   canAppeal?: boolean;
 };
